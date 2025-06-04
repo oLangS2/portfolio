@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { RiHome2Fill } from "react-icons/ri";
 
 const tabs = [
-    { id: 'main', label: '메인' },
+    { id: 'main', label: '프롤로그' },
     { id: 'about', label: '기술' },
     { id: 'projects', label: '프로젝트' },
     { id: 'career', label: '경력' },
