@@ -1,3 +1,144 @@
-div{
-    color: blue;
+@charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-style: normal;
 }
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/woff/Pretendard-Black.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+$white-0: #fff;
+$gray-0: #191F32;
+$gray-1: #4b586b;
+$gray-2: #64748b;
+$gray-3: #b1b9cb;
+$gray-4: #e2e8f0;
+$gray-5: #f1f3f4;
+$gray-6: #f8f9fb;
+$point:#2272eb;
+//SECTION 스타일 리셋
+*{
+	box-sizing:border-box;
+	word-break:keep-all;
+	-webkit-text-size-adjust:none; // ios 자동 폰트사이즈 변경 방지 
+}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
+    margin:0;
+    padding:0;
+    border:0;
+}
+html{
+    overflow-x:auto;
+    overflow-y:auto;
+    font-size:16px;
+}
+body{
+    line-height:1.5;
+    color:$gray-0;
+    font-family: 'Pretendard';
+}
+nav,ol,ul{
+    list-style:none;
+}
+img{
+    vertical-align:middle
+}
+input,button,textarea,select{
+    margin:0;
+    padding:0;
+    border-radius: 0;
+    font-family: 'Pretendard';
+    color:$gray-0;
+    font-size:1rem;
+	&:not([type="checkbox"]):not([type="radio"]):not(select) {
+		appearance: none;
+	}
+}
+button,label{
+    cursor:pointer;
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+    font-weight:700;
+}
+address,cite,em,i{
+    font-style:normal;
+}
+a:link,a:visited{
+    color:$gray-0;
+    text-decoration:none;
+}
+a:hover,a:focus,a:active{
+    color:#1957c2;
+    background-color:transparent;
+    text-decoration:none;
+}
+select {
+    appearance: none; /* 기본 스타일 제거 */
+    -webkit-appearance: none; /* 크롬, 사파리 */
+    -moz-appearance: none; /* 파이어폭스 */
+}
+button {
+    border: none;
+    background: inherit;
+}
+
+//!SECTION 스타일 리셋
+
+.section{
+    width: 100%;
+    text-align: center;
+
+    .main_visual{
+        padding: 200px 0;
+        h2{
+            font-size: 64px;
+            font-weight: 700;
+            span{
+                color: $point;
+            }
+        }
+        h3{
+            padding: 50px 0;
+           font-weight:500;
+           font-size: 28px; 
+           color:$gray-1;
+        }
+    }
+}
+
+//SECTION 탭
+.tab_container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(#f1f3f4,0.8);
+    position: sticky;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width:min-content;
+    border-radius: 100px;
+
+    .tab_button {
+        background: none;
+        border: none;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 1rem 1.5rem;
+        transition: 0.3s;
+        &:hover {
+            color: $point;
+        }
+        &.active{
+            color: $white-0;
+            background-color: $point;
+            border-radius: 100px;
+        }
+    }
+}
+//!SECTION 탭

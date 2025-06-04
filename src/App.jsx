@@ -4,15 +4,17 @@ import Projects from './components/sections/Projects';
 import Career from './components/sections/Career';
 import Footer from './components/sections/Footer';
 import './styles/global.scss';
+import { Tab } from './components/common/Tab';
 
 function App() {
   return (
     <div>
       <MainVisual />
-      <AboutMe />
-      <Projects />
-      <Career />
-      <Footer />
+      <Tab/>
+      <AboutMe/>
+      <Projects/>
+      <Career/>
+      <Footer/>
     </div>
   );
 }
