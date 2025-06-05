@@ -3,7 +3,7 @@ import React from 'react'
 const AboutMe = () => {
   return (
     <div className="section" id="about">
-      <div className="about_wrap">
+      <div className="section_wrap about_wrap">
         <span className="title">
           👩‍💻<br />
           일관된 가치로 개발하고 있습니다.

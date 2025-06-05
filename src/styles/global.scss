@@ -91,9 +91,6 @@ button {
     align-items: center;
     justify-content: center;
 }
-.justify-start{
-    justify-content: flex-start;
-}
 .gap-10{
     gap: 10px;
 }
@@ -128,8 +125,8 @@ button {
         }
     }
     //!SECTION 메인
-    //SECTION 기술
-    .about_wrap{
+    //SECTION 섹션 공통
+    .section_wrap{
         padding: 50px 0;
         .title{
             font-size: 26px;
@@ -137,6 +134,10 @@ button {
             margin: 50px 0 30px;
             display: block;
         }
+    }
+    //!SECTION 섹션 공통
+    //SECTION 기술
+    .about_wrap{
         .box{
             flex:1;
             background: $gray-6;
@@ -164,6 +165,54 @@ button {
         }
     }
     //!SECTION 기술
+    //SECTION 경력
+    .career_wrap{
+        .box_wrap{
+            border-top: 1px solid $gray-5;
+            padding: 50px 0;
+            margin: 0 auto;
+            .box{
+                text-align: left;
+                margin-bottom: 50px;
+                .left{
+                    width:30%;
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-align: right;
+                }
+                .right{
+                    padding-left: 100px;
+                    width: 70%;
+                    word-break: keep-all;
+                    span{
+                        font-size: 14px;
+                        color: $gray-3;
+                        padding-left: 10px;
+                    }
+                    .more{
+                        margin-top: 20px;
+                        li{
+                            position: relative;
+                            color: $gray-1;
+                            padding-left: 30px;
+                        }
+                        li:before{
+                            content: "";
+                            width: 3px;
+                            height: 3px;
+                            position: absolute;
+                            top: 50%;
+                            left: 10px;
+                            background-color: $gray-1;
+                            transform: translateY(-50%);
+                            border-radius: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //!SECTION 경력
 }
 
 //SECTION 탭
@@ -171,7 +220,8 @@ button {
     display: flex;
     gap: 1rem;
     padding: 0.5rem 1rem;
-    background: $gray-6;
+    backdrop-filter: blur(10px);
+    background-color: rgba($gray-4, 0.5); /* 반투명 배경 */
     position: sticky;
     top: 20px;
     left: 50%;

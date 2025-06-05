@@ -8,12 +8,12 @@ import { Tab } from './components/common/Tab';
 
 function App() {
   return (
-    <div>
+    <div className=''>
       <MainVisual />
       <Tab/>
       <AboutMe/>
-      <Projects/>
       <Career/>
+      <Projects/>
       <Footer/>
     </div>
   );
