@@ -97,6 +97,12 @@ button {
 .gap-10{
     gap: 10px;
 }
+.gap-20{
+    gap: 20px;
+}
+.gap-30{
+    gap: 30px;
+}
 //!SECTION 스타일 리셋
 
 .section{
@@ -125,15 +131,35 @@ button {
     //SECTION 기술
     .about_wrap{
         padding: 50px 0;
-        .title{}
+        .title{
+            font-size: 26px;
+            font-weight: 700;
+            margin: 50px 0 30px;
+            display: block;
+        }
         .box{
             flex:1;
-            // border: 1px solid $gray-4;
-            padding: 50px;
-            text-align: left;
+            background: $gray-6;
+            padding: 100px 50px;
+            border-radius: 20px;
+            span{
+                font-size: 10px;
+                border: 1px solid $gray-2;
+                color: $gray-2;
+                border-radius: 100px;
+                padding:2px 8px;
+                display: block;
+                width: max-content;
+                margin: 0 auto 10px;
+            }
+            strong{
+                font-size: 18px;
+                font-weight: 600;
+            }
             p{
-                padding-top: 10px;
+                padding-top: 30px;
                 word-break: keep-all;
+                color: $gray-0;
             }
         }
     }
@@ -144,8 +170,8 @@ button {
 .tab_container {
     display: flex;
     gap: 1rem;
-    padding: 1rem;
-    background: rgba(#f1f3f4,0.8);
+    padding: 0.5rem 1rem;
+    background: $gray-6;
     position: sticky;
     top: 20px;
     left: 50%;

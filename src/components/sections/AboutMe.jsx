@@ -4,9 +4,13 @@ const AboutMe = () => {
   return (
     <div className="section" id="about">
       <div className="about_wrap">
-        <span className="title">핵심 역량</span>
-        <div className="flex justify-start gap-10">
+        <span className="title">
+          👩‍💻<br />
+          일관된 가치로 개발하고 있습니다.
+        </span>
+        <div className="flex justify-start gap-20">
           <div className="box">
+            <span>Modern Frontend</span>
             <strong>모던 프론트엔드 개발</strong>
             <p>
               React와 Vite 기반의 프론트엔드 개발 경험을 보유하고 있으며, JavaScript에 능숙합니다.
@@ -14,17 +18,18 @@ const AboutMe = () => {
             </p>
           </div>
           <div className="box">
-            <strong>사용자 중심 개발 추구</strong>
+            <span>User-Centered</span>
+            <strong>사용자 중심의 관점</strong>
             <p>
-              다양한 사용자들이 편리하게 이용할 수 있도록 직관적이고 친숙한 UI 제공과 함께
-              Chrome Lighthouse을 활용해 웹사이트의 성능을 측정하고 개선합니다.
+              '시용자'에게 꼭 필요한 것인지 고민하여 직관적인 UI를 설계하고, 웹 성능 분석 도구를 활용한 개선 작업을 병행합니다.
             </p>
           </div>
           <div className="box">
-            <strong>커뮤니케이션 및 협업</strong>
+            <span>Teamwork</span>
+            <strong>유연한 팀워크</strong>
             <p>
-              Github 이용한 협업 경험이 있으며, Slack, Notion 등의 협업 도구 사용 경험도 있습니다.
-              기획, 디자인, 총무 등 다양한 직무 경험을 기반으로 다른 직군과 원활한 커뮤니케이션이 가능합니다.
+              Github 이용한 협업 경험이 있으며, Slack, Notion, Figma 등의 협업 도구 사용 경험도 있습니다.
+              협업의 흐름 속에서, 완성도 높은 결과를 만듭니다.
             </p>
           </div>
         </div>
