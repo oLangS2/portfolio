@@ -8,7 +8,7 @@ const AboutMe = () => {
           👩‍💻<br />
           일관된 가치로 개발하고 있습니다.
         </span>
-        <div className="flex justify-start gap-20">
+        <section className="flex justify-start gap-20">
           <div className="box">
             <span>Modern Frontend</span>
             <strong>모던 프론트엔드 개발</strong>
@@ -32,7 +32,7 @@ const AboutMe = () => {
               협업의 흐름 속에서, 완성도 높은 결과를 만듭니다.
             </p>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   )
