@@ -39,8 +39,6 @@ body{
     line-height:1.5;
     color:$gray-0;
     font-family: 'Pretendard';
-    overflow: hidden;
-    height: 100%;
 }
 nav,ol,ul{
     list-style:none;
@@ -90,14 +88,11 @@ button {
     display: flex;
 }
 .flex-wrap{
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
 .items-center{
     align-items: center;
     justify-content: center;
-}
-.justify-start{
-    justify-content: flex-start;
 }
 .gap-10{
     gap: 10px;
@@ -148,7 +143,7 @@ button {
     .about_wrap{
         .box{
             flex:1;
-            background: $gray-6;
+            border: 1px solid $gray-4;
             padding: 100px 50px;
             border-radius: 20px;
             span{
@@ -222,51 +217,79 @@ button {
     }
     //!SECTION 경력
     //SECTION 프로젝트
-    .project_wrap{
-        padding: 50px 0;
-        .card{
-            cursor: pointer;
-            flex: 1;
-            border: 1px solid $gray-4;
-            border-radius: 20px;
-            padding: 30px;
-            height: 200px;
-            text-align: left;
-            position: relative;
-            transition: 0.3s;
-            box-shadow: 0 6px 3px rgba(0, 0, 0, 0.10);
-            span{
-                font-size: 12px;
-                color: $gray-2;
-            }
-            p{
-                margin-top: 20px;
-                font-size: 14px;
-            }
-            .see-more{
-                border:1px solid $point;
-                border-radius: 100px;
-                background-color: $white-0;
-                color: $point;
-                font-size: 14px;
-                padding: 10px 20px;
-                position: absolute;
-                bottom: 30px;
-                right: 30px;
-                font-weight: 600;
-            }
-
-            &:hover{
-                border: $white-0;
-                background-color: $point;
-                color:$white-0;
-                transform: translateY(-5px);
+    .projects_wrap{
+        .card_wrap{
+            padding: 50px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            .card{
+                cursor: pointer;
+                border: 1px solid $gray-4;
+                border-radius: 20px;
+                padding: 30px 30px;
+                height: max-content;
+                text-align: left;
+                position: relative;
+                transition: 0.3s;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.10);
                 span{
-                    color: $white-0;
+                    font-size: 12px;
+                    color: $gray-2;
+                }
+                p{
+                    margin-top: 20px;
+                    font-size: 16px;
+                }
+                .detail_more{
+                    position: absolute;
+                    top: 30px;
+                    right: 30px;
+                }
+                &:hover{
+                    border: $white-0;
+                    background-color: $point;
+                    color:$white-0;
+                    transform: translateY(-5px);
+                    span{
+                        color: $white-0;
+                    }
+                    .detail_more{
+                        color: $white-0;
+                    }
+                }
+            }
+        }
+        .more_project{
+            border: 1px solid $gray-4;
+            color: $gray-0;
+            font-size: 14px;
+            padding: 12px 24px;
+            font-weight: 600;
+            border-radius: 100px;
+            position: relative;
+            overflow: hidden;
+            &::after{
+                content:"";
+                position: absolute;
+                top: 0;
+                left: -100%;
+                background-color: $gray-1;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                transition: 0.3s;
+            }
+            &:hover{
+                color: $white-0;
+                &::after{
+                    left: 0;
                 }
             }
         }
     }
+
     //!SECTION 프로젝트
 }
 
@@ -307,6 +330,7 @@ button {
 
 //SECTION 프로젝트 모달
 .modal_overlay{
+    z-index: 101;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);

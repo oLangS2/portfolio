@@ -22,9 +22,81 @@ const projectData = [
     id: 3,
     title: "농심몰 이벤트 및 TV 페이지 구축",
     company: "농심몰",
-    period: "24.06 - 25.03",
+    period: "상시",
     description:
       "백엔드 API를 활용하여 게임 이벤트 페이지를 제작하고, 농심몰 TV와 이를 관리하기 위한 백오피스를 개발했습니다.",
+    tech: ["React", "API", "SCSS", "JavaScript"],
+  },
+  {
+    id: 4,
+    title: "",
+    company: "후디스몰",
+    period: "상시",
+    description:
+      "",
+    tech: ["React", "API", "SCSS", "JavaScript"],
+  },
+  {
+    id: 5,
+    title: "",
+    company: "아윤채몰 / 아윤채프로몰",
+    period: "상시",
+    description:
+      "",
+    tech: ["React", "API", "SCSS", "JavaScript"],
+  },
+  {
+    id: 6,
+    title: "",
+    company: "샹프리몰",
+    period: "상시",
+    description:
+      "",
+    tech: ["React", "API", "SCSS", "JavaScript"],
+  },
+  {
+    id: 7,
+    title: "",
+    company: "에스원",
+    period: "상시",
+    description:
+      "",
+    tech: ["React", "API", "SCSS", "JavaScript"],
+  },
+  {
+    id: 8,
+    title: "",
+    company: "엘리트교복",
+    period: "상시",
+    description:
+      "",
+    tech: ["React", "API", "SCSS", "JavaScript"],
+  },
+  {
+    id: 9,
+    title: "",
+    company: "윌비",
+    period: "상시",
+    description:
+      "",
+    tech: ["React", "API", "SCSS", "JavaScript"],
+  },
+  {
+    id: 10,
+    title: "",
+    company: "하이어랭크",
+    period: "상시",
+    description:
+      "",
+    tech: ["React", "API", "SCSS", "JavaScript"],
+  },
+  {
+    id: 11,
+    title: "",
+    company: "세일레이싱",
+    period: "상시",
+    description:
+      "",
     tech: ["React", "API", "SCSS", "JavaScript"],
   },
 ];
