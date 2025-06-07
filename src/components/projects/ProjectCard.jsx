@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsArrowUpRightCircle } from "react-icons/bs";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const ProjectCard = ({ data, onClick }) => {
   return (
@@ -10,7 +10,7 @@ const ProjectCard = ({ data, onClick }) => {
         <p>{data.title}</p>
       </div>
       <button className="detail_more">
-        <BsArrowUpRightCircle size={25}/>
+        <AiOutlinePlusCircle size={25}/>
       </button>
     </div>
   );

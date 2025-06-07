@@ -5,6 +5,7 @@ const career = () => {
     <div className="section" id="career">
       <div className="section_wrap career_wrap">
         <div className="title">
+          📍 <br />
           경력 및 담당업무
         </div>
         <ul className='box_wrap'>
