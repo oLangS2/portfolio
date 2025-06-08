@@ -1,13 +1,13 @@
 //SECTION 탭 구현 (클릭 시 해당 섹션으로 이동)
 import React, { useEffect, useState } from 'react'
-import { RiHome2Fill } from "react-icons/ri";
 
 const tabs = [
     { id: 'main', label: '프롤로그' },
     { id: 'about', label: '기술' },
     { id: 'career', label: '경력' },
     { id: 'projects', label: '프로젝트' },
-    { id: 'contact', label: '에필로그' },
+    { id: 'notion', label: '노션' },
+    { id: 'footer', label: '에필로그' },
   ]
   
   export const Tab = () => {

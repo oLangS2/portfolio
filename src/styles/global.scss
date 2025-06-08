@@ -71,7 +71,6 @@ a:link,a:visited{
     text-decoration:none;
 }
 a:hover,a:focus,a:active{
-    color:#1957c2;
     background-color:transparent;
     text-decoration:none;
 }
@@ -114,7 +113,7 @@ button {
     .main_visual{
         padding: 200px 0 100px;
         h2{
-            font-size: 50px;
+            font-size: 3rem;
             font-weight: 700;
             span{
                 color: $point;
@@ -122,9 +121,9 @@ button {
         }
         h3{
             padding: 50px 0;
-           font-weight:500;
-           font-size: 20px; 
-           color:$gray-1;
+            font-weight:500;
+            font-size: 1.3rem; 
+            color:$gray-1;
         }
     }
     //!SECTION 메인
@@ -132,7 +131,7 @@ button {
     .section_wrap{
         padding: 50px 100px;
         .title{
-            font-size: 26px;
+            font-size: 1.6rem;
             font-weight: 700;
             margin: 50px 0 30px;
             display: block;
@@ -142,10 +141,15 @@ button {
     //SECTION 기술
     .about_wrap{
         .box{
+            background: #f5f5f7;
+            box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.08);
             flex:1;
-            border: 1px solid $gray-4;
             padding: 50px 30px;
             border-radius: 10px;
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.02);
+            }
             span{
                 font-size: 10px;
                 border: 1px solid $gray-2;
@@ -251,7 +255,7 @@ button {
                     border: $white-0;
                     background-color: $point;
                     color:$white-0;
-                    transform: translateY(-5px);
+                    transform: translateY(-3px);
                     span{
                         color: $white-0;
                     }
@@ -275,7 +279,7 @@ button {
                 position: absolute;
                 top: 0;
                 left: -100%;
-                background-color: $gray-2;
+                background-color: $gray-0;
                 width: 100%;
                 height: 100%;
                 z-index: -1;
@@ -283,80 +287,131 @@ button {
             }
             &:hover{
                 color: $white-0;
+                border: 1px solid $gray-0;
                 &::after{
                     left: 0;
                 }
             }
         }
     }
-
     //!SECTION 프로젝트
-}
     //SECTION 푸터
-    .contact_wrap{
-        padding: 50px 0;
-        position: relative;
-        .title{
-            font-size: 26px;
-            font-weight: 700;
-            margin: 50px 0 30px;
-            display: block;
-            text-align: center;
-        }
-        
-        .swiper{
-            padding-left: 200px;
-            .swiper-slide{
-                padding: 30px;
-                height: 240px;
-                background-color: $gray-6;
-                border-radius: 10px;
-                text-align: left;
-                position: relative;
-                p{
-                    font-weight: 600;
-                    font-size: 20px;
-                    margin-bottom: 10px;
-                }
-                span{
-                    font-size: 14px;
-                }
-                .icon{
-                    position: absolute;
-                    bottom: 30px;
-                    svg{
-                        margin-left: 10px;
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                    }
-                }
+    .footer_wrap{
+        padding: 200px 0 300px;
+        a{
+            border: 1px solid $gray-4;
+            color: $gray-0;
+            font-size: 14px;
+            padding: 12px 24px;
+            font-weight: 400;
+            border-radius: 100px;
+            &.notion_link{
+                background-color: $point;
+                border: 1px solid  $point;
+                color: $white-0;
+                margin-right: 20px;
             }
-        }
-
-        .navigation_wrap{
-            padding: 20px 0 0 0;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .contact_title{
-            font-size: 26px;
-            font-weight: 700;
-            margin: 300px 0;
-            display: block;
-            text-align: center;
         }
     }
     //!SECTION 푸터
+}
+//SECTION 노션
+.notion_wrap{
+    margin: 100px 0 0;
+    padding: 50px 0 150px;
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f7;
+    
+    .title{
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin: 50px 0 30px;
+        display: block;
+        text-align: center;
+    }
+    
+    .swiper{
+        padding-left: 200px;
+        overflow: visible;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar{
+            display:none;
+        }
+        &:hover{
+            .custom-next,.custom-prev{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .swiper-slide{
+            .box{
+                padding: 30px;
+                height: 320px;
+                background-color: $white-0;
+                border-radius: 10px;
+                text-align: left;
+                position: relative;
+                display: block;
+                box-shadow: 2px 4px 12px #00000014;
+                transition: all .3s cubic-bezier(0,0,.5,1);
+                &:hover{
+                    box-shadow: 2px 4px 16px #00000029;
+                    transform: scale(1.01);
+                }
+            }
+            p{
+                font-weight: 600;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            span{
+                font-size: 14px;
+            }
+            .icon{
+                position: absolute;
+                bottom: 30px;
+                svg{
+                    margin-left: 10px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
 
+    .navigation_wrap{
+        padding: 20px 0 0 0;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 50%;
+        .custom-prev,.custom-next{
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            opacity: 0;
+            transition: 0.3s;
+            transform: scale(0.9);
+        }
+        .custom-prev{
+            left: 20px;
+        }
+        .custom-next{
+            right: 20px;
+        }
+    }
+
+}
+//!SECTION 노션
 //SECTION 탭
 .tab_container {
     display: flex;
     gap: 1rem;
     padding: 0.5rem 1rem;
     backdrop-filter: blur(10px);
-    background-color: rgba($gray-4, 0.5); /* 반투명 배경 */
+    background-color: rgba($gray-4, 0.4); /* 반투명 배경 */
     position: sticky;
     top: 20px;
     left: 50%;

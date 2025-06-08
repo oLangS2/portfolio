@@ -8,7 +8,7 @@ const AboutMe = () => {
           👩‍💻<br />
           일관된 가치로 개발하고 있습니다.
         </span>
-        <section className="flex justify-start gap-20">
+        <section className="flex justify-start gap-30">
           <div className="box">
             <span>Modern Frontend</span>
             <strong>모던 프론트엔드 개발</strong>
