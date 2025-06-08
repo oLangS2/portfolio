@@ -2,10 +2,12 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
-import { IoIosArrowForward } from "react-icons/io";
 import { CgChevronRightO, CgChevronLeftO } from "react-icons/cg";
+import noteData from "../../data/note";
+import NotionSlide from '../notionSlide/NotionSlide';
 
 const notion = () => {
+  console.log(noteData)
   return (
     <div id="notion">
         <div className="notion_wrap">
@@ -23,51 +25,11 @@ const notion = () => {
             slidesPerView={4.5}
             loop={false}
           >
-            <SwiperSlide>
-              <a className="box" href='https://infrequent-accordion-3ab.notion.site/CSS-1fc049798a358026a165f3f9ac5022a0' target='_blank'>
-                <p>Shopby 사전 검토 및 파일럿 테스트</p>
-                <span>2025.01.27</span>
-                <div className="icon">
-                  해당 글로 이동<IoIosArrowForward />
-                </div>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-            <a className="box" href='https://infrequent-accordion-3ab.notion.site/CSS-1fc049798a358026a165f3f9ac5022a0' target='_blank'>
-                <p>Shopby 사전 검토 및 파일럿 테스트</p>
-                <span>2025.01.27</span>
-                <div className="icon">
-                  해당 글로 이동<IoIosArrowForward />
-                </div>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-            <a className="box" href='https://infrequent-accordion-3ab.notion.site/CSS-1fc049798a358026a165f3f9ac5022a0' target='_blank'>
-                <p>Shopby 사전 검토 및 파일럿 테스트</p>
-                <span>2025.01.27</span>
-                <div className="icon">
-                  해당 글로 이동 <IoIosArrowForward />
-                </div>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-            <a className="box" href='https://infrequent-accordion-3ab.notion.site/CSS-1fc049798a358026a165f3f9ac5022a0' target='_blank'>
-                <p>Shopby 사전 검토 및 파일럿 테스트</p>
-                <span>2025.01.27</span>
-                <div className="icon">
-                  해당 글로 이동<IoIosArrowForward />
-                </div>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-            <a className="box" href='https://infrequent-accordion-3ab.notion.site/CSS-1fc049798a358026a165f3f9ac5022a0' target='_blank'>
-                <p>Shopby 사전 검토 및 파일럿 테스트</p>
-                <span>2025.01.27</span>
-                <div className="icon">
-                  해당 글로 이동<IoIosArrowForward />
-                </div>
-              </a>
-            </SwiperSlide>
+            {noteData.map((p)=> (
+                <SwiperSlide key={p.id}>
+                  <NotionSlide data={p} />
+                </SwiperSlide>
+            ))}
             {/* 커스텀 버튼 */}
             <div className="navigation_wrap flex gap-10">
               <div className="custom-prev swiper-button-prev">
