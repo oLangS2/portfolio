@@ -312,7 +312,7 @@ button {
     }
     
     .swiper{
-        padding-left: 20vw;
+        padding-left: rem;
         overflow: visible;
         -ms-overflow-style: none;
         &::-webkit-scrollbar{
@@ -408,9 +408,13 @@ button {
         .title{
             font-size: 1.6rem;
             font-weight: 700;
-            display: block;
-            margin-bottom: 30px;
+            // display: block;
+            margin-bottom: 20px;
         }
+        p{
+            margin-bottom: 50px;
+        }
+
         a{
             border: 1px solid $gray-4;
             color: $gray-0;
@@ -418,6 +422,7 @@ button {
             padding: 12px 24px;
             font-weight: 400;
             border-radius: 100px;
+            background-color: $white-0;
             &.notion_link{
                 background-color: $point;
                 border: 1px solid  $point;
