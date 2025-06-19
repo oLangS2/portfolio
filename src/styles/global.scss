@@ -312,7 +312,7 @@ button {
     }
     
     .swiper{
-        padding-left: rem;
+        padding-left: 20vw;
         overflow: visible;
         -ms-overflow-style: none;
         &::-webkit-scrollbar{
@@ -408,7 +408,7 @@ button {
         .title{
             font-size: 1.6rem;
             font-weight: 700;
-            // display: block;
+            display: block;
             margin-bottom: 20px;
         }
         p{
