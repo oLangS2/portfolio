@@ -244,11 +244,14 @@ button {
                 cursor: pointer;
                 border: 1px solid $gray-4;
                 border-radius: 10px;
-                padding: 30px;
-                height: 220px;
+                padding: 30px 20px;
+                height:260px;
                 text-align: left;
                 position: relative;
                 transition: 0.3s;
+                .icon{
+                    font-size: 30px;
+                }
                 span{
                     font-size: 12px;
                     color: $gray-2;
@@ -259,9 +262,14 @@ button {
                     font-size: 16px;;
                 }
                 .detail_more{
+                    padding: 10px;
+                    border: 1px solid $gray-4;
+                    border-radius: 100px;
+                    font-size: 12px;
                     position: absolute;
                     bottom: 30px;
-                    right: 30px;
+                    font-weight: 600;
+                    color: $gray-2;
                 }
                 &:hover{
                     border: $white-0;
@@ -272,7 +280,9 @@ button {
                         color: $white-0;
                     }
                     .detail_more{
-                        color: $white-0;
+                        color: $gray-0;
+                        border: 1px solid $white-0;
+                        background-color: $white-0;
                     }
                 }
             }
@@ -358,7 +368,7 @@ button {
                     width: 100%;
                     height: 100%;
                     z-index: -1;
-                    opacity: 0.1;
+                    opacity: 0.05;
                 }
             }
             p{
@@ -408,7 +418,7 @@ button {
 //!SECTION 노션
 //SECTION 푸터
 .footer_wrap{
-    padding: 200px 0 300px;
+    padding: 200px 0;
     background-color: $gray-6;
     text-align: center;
     .box{
