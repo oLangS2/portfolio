@@ -2,7 +2,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
-import { CgChevronRightO, CgChevronLeftO } from "react-icons/cg";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import noteData from "../../data/note";
 import NotionSlide from '../notionSlide/NotionSlide';
 
@@ -22,7 +22,7 @@ const notion = () => {
               nextEl: '.custom-next',
             }}
             spaceBetween={20}
-            slidesPerView={4.5}
+            slidesPerView={3.5}
             loop={false}
           >
             {noteData.map((p)=> (
@@ -33,10 +33,10 @@ const notion = () => {
             {/* 커스텀 버튼 */}
             <div className="navigation_wrap flex gap-10">
               <div className="custom-prev swiper-button-prev">
-                <CgChevronLeftO size={50}/>
+                <AiOutlineLeft size={40}/>
               </div>
               <div className="custom-next swiper-button-next">
-                <CgChevronRightO size={50}/>
+                <AiOutlineRight size={40}/>
               </div>
             </div>
           </Swiper>
