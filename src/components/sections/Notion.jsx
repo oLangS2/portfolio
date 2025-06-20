@@ -7,7 +7,6 @@ import noteData from "../../data/note";
 import NotionSlide from '../notionSlide/NotionSlide';
 
 const notion = () => {
-  console.log(noteData)
   return (
     <div id="notion">
         <div className="notion_wrap">

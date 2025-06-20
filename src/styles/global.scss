@@ -114,6 +114,9 @@ button {
 .mb-50{
     margin-bottom: 50px;
 }
+.mt-30{
+    margin-top: 30px;
+}
 //!SECTION 스타일 리셋
 
 .section{
@@ -542,6 +545,7 @@ button {
             background: $white-0;
             border-radius: 20px;
             padding: 50px;
+            word-break: break-all;
             .icon{
                 font-size: 50px;
                 display: block;
@@ -568,12 +572,12 @@ button {
                 height: 1px;
                 margin-bottom: 50px;
             }
-            .feature-block{
+            .block{
                 p{
                     background-color: $gray-5;
                     padding: 7px 20px;
                     border-radius: 3px;
-                    margin: 10px 0;
+                    margin: 5px 0;
                     font-weight: 600;
                     cursor: pointer;
                     &:hover{
@@ -581,6 +585,7 @@ button {
                     }
                 }
                 ul{
+                    padding: 5px 0 15px;
                     li{
                        margin-left: 35px;
                        position: relative;
@@ -593,6 +598,7 @@ button {
                         background-color: $gray-0;
                         width: 3px;
                         height: 3px;
+                        border-radius: 100px;
                        }
                     }
                 }
