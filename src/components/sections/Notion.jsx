@@ -33,10 +33,10 @@ const notion = () => {
             {/* 커스텀 버튼 */}
             <div className="navigation_wrap flex gap-10">
               <div className="custom-prev swiper-button-prev">
-                <AiOutlineLeft size={40}/>
+                <AiOutlineLeft size={16}/>
               </div>
               <div className="custom-next swiper-button-next">
-                <AiOutlineRight size={40}/>
+                <AiOutlineRight size={16}/>
               </div>
             </div>
           </Swiper>

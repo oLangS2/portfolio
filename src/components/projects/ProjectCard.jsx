@@ -1,11 +1,10 @@
 import React from 'react';
-import { AiOutlinePlus } from "react-icons/ai";
+import { SiAqua } from "react-icons/si";
 
 const ProjectCard = ({ data, onClick }) => {
   return (
     <div className="card" onClick={onClick}>
       <div className="desc">
-        <div className='icon'>{data.icon}</div>
         <h3>{data.company}</h3>
         <span>{data.period}</span>
         <p>{data.title}</p>

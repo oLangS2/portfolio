@@ -2,7 +2,6 @@
 const projectData = [
   {
     id: 1,
-    icon:"📘",
     people:"FE 2",
     link:"https://www.jinrotonic.com/",
     title: "진로토닉몰 쇼핑몰 구축 및 고도화",
