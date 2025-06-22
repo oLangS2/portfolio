@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { AiOutlineClose } from "react-icons/ai";
+import ModalSkeleton from './ModalSkeleton';
 
 const ProjectModal = ({ data, onClose }) => {
+  const [isLoading, setIsLoading] = useState(true); //초기에는 로딩중 
   const [openState, setOpenState] = useState({
     feature:[],
     trouble:[],
@@ -30,6 +32,14 @@ const ProjectModal = ({ data, onClose }) => {
     };
   }, [data.features, data.trouble]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   // 공통 토글 함수
   const toggleSection = (section, index) => {
     setOpenState((prev) => {
@@ -42,85 +52,88 @@ const ProjectModal = ({ data, onClose }) => {
   };
 
   return (
-    <div className="modal_overlay" onClick={onClose}>
-      <>
+      <div className="modal_overlay" onClick={onClose}>
         <div className="modal" onClick={(e) => e.stopPropagation()}>
           <button className="close" onClick={onClose}>
             <AiOutlineClose size={40}/>
           </button>
           <div className="bg">
-            <span className='icon'>{data.icon}</span> 
-            <h4 className='project_title mb-30'>{data.title}</h4>
-            <div className='mb-30'>
-              <span className='sub_tite'>프로젝트 설명</span>
-              <p>{data.account}</p>
-            </div>
-            <div className="flex gap-30 mb-10">
-              <div>
-                <span className='sub_tite'>기간</span>
-                <p>{data.period}</p>
-              </div>
-              <div>
-                <span className='sub_tite'>참여 인원</span>
-                <p>{data.people}</p>
-              </div>
-            </div>
-            <div className="flex gap-30 mb-50">
-              <div>
-                <span className='sub_tite'>기술 스택</span>
-                <p>{data.tech.join(", ")}</p>
-              </div>
-              <div>
-                <span className='sub_tite'>관련 링크</span>
-                {data.link && data.link.trim() != "" ? (
-                  <a href={data.link} target="_blank" rel="noopener noreferrer" className='link'>사이트로 이동</a>
-                ) : (
-                  <p>비공개 URL</p>
+            {isLoading ? <ModalSkeleton/>
+            : (
+              <div className="content">
+                <span className='icon'>{data.icon}</span> 
+                <h4 className='project_title mb-30'>{data.title}</h4>
+                <div className='mb-30'>
+                  <span className='sub_tite'>프로젝트 설명</span>
+                  <p>{data.account}</p>
+                </div>
+                <div className="flex gap-30 mb-10">
+                  <div>
+                    <span className='sub_tite'>기간</span>
+                    <p>{data.period}</p>
+                  </div>
+                  <div>
+                    <span className='sub_tite'>참여 인원</span>
+                    <p>{data.people}</p>
+                  </div>
+                </div>
+                <div className="flex gap-30 mb-50">
+                  <div>
+                    <span className='sub_tite'>기술 스택</span>
+                    <p>{data.tech.join(", ")}</p>
+                  </div>
+                  <div>
+                    <span className='sub_tite'>관련 링크</span>
+                    {data.link && data.link.trim() != "" ? (
+                      <a href={data.link} target="_blank" rel="noopener noreferrer" className='link'>사이트로 이동</a>
+                    ) : (
+                      <p>비공개 URL</p>
+                    )}
+                  </div>
+                </div>
+                <div className="line"></div>
+                {/* 작업 기여도 */}
+                {Array.isArray(data.features) && (
+                  <>
+                    <strong className='mb-10'>📌  작업 기여도</strong>
+                    {data.features.map((feature, idx) => (
+                      <div key={idx} className="block">
+                        <p onClick={() => toggleSection('feature', idx)}>{feature.title}</p>
+                        {openState.feature.includes(idx) && (
+                          <ul>
+                            {feature.descriptions.map((desc, dIdx) => (
+                              <li key={dIdx}>{desc}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
+                  </>
+                )}
+                {/* 트러블 슈팅 (있을 경우에만 표시) */}
+                {Array.isArray(data.trouble) && (
+                  <>
+                    <div className="line mt-30"></div>
+                    <strong className='mb-10'>💫 트러블 슈팅</strong>
+                    {data.trouble.map((trouble, idx) => (
+                      <div key={idx} className='block'>
+                        <p onClick={() => toggleSection('trouble', idx)}>{trouble.title}</p>
+                        {openState.trouble.includes(idx) && (
+                          <ul>
+                          {trouble.descriptions.map((desc, dIdx) => (
+                              <li key={dIdx} dangerouslySetInnerHTML={{ __html: desc }} />
+                          ))}
+                        </ul>
+                        )}
+                      </div>
+                    ))}
+                  </>
                 )}
               </div>
-            </div>
-            <div className="line"></div>
-            {/* 작업 기여도 */}
-            {Array.isArray(data.features) && (
-              <>
-                <strong className='mb-10'>📌  작업 기여도</strong>
-                {data.features.map((feature, idx) => (
-                  <div key={idx} className="block">
-                    <p onClick={() => toggleSection('feature', idx)}>{feature.title}</p>
-                    {openState.feature.includes(idx) && (
-                      <ul>
-                        {feature.descriptions.map((desc, dIdx) => (
-                          <li key={dIdx}>{desc}</li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                ))}
-              </>
-            )}
-            {/* 트러블 슈팅 (있을 경우에만 표시) */}
-            {Array.isArray(data.trouble) && (
-              <>
-                <div className="line mt-30"></div>
-                <strong className='mb-10'>💫 트러블 슈팅</strong>
-                {data.trouble.map((trouble, idx) => (
-                  <div key={idx} className='block'>
-                    <p onClick={() => toggleSection('trouble', idx)}>{trouble.title}</p>
-                    {openState.trouble.includes(idx) && (
-                      <ul>
-                      {trouble.descriptions.map((desc, dIdx) => (
-                          <li key={dIdx} dangerouslySetInnerHTML={{ __html: desc }} />
-                      ))}
-                    </ul>
-                    )}
-                  </div>
-                ))}
-              </>
             )}
           </div>
         </div>
-      </>
-    </div>
+      </div>
   );
 };
 
