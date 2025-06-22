@@ -588,6 +588,7 @@ button {
                     padding: 5px 0 15px;
                     li{
                        margin-left: 35px;
+                       padding-bottom: 5px;
                        position: relative;
                        &::before{
                         content: "";
@@ -600,6 +601,10 @@ button {
                         height: 3px;
                         border-radius: 100px;
                        }
+                       strong{
+                        display: inline-block!important;
+                        font-size: 1rem!important;
+                    }
                     }
                 }
             }

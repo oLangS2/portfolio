@@ -72,7 +72,11 @@ const ProjectModal = ({ data, onClose }) => {
               </div>
               <div>
                 <span className='sub_tite'>관련 링크</span>
-                <a href={data.link} target="_blank" className='link'>사이트로 이동</a>
+                {data.link && data.link.trim() != "" ? (
+                  <a href={data.link} target="_blank" rel="noopener noreferrer" className='link'>사이트로 이동</a>
+                ) : (
+                  <p>비공개 URL</p>
+                )}
               </div>
             </div>
             <div className="line"></div>
@@ -105,7 +109,7 @@ const ProjectModal = ({ data, onClose }) => {
                     {openState.trouble.includes(idx) && (
                       <ul>
                       {trouble.descriptions.map((desc, dIdx) => (
-                        <li key={dIdx}>{desc}</li>
+                          <li key={dIdx} dangerouslySetInnerHTML={{ __html: desc }} />
                       ))}
                     </ul>
                     )}
