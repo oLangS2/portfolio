@@ -42,7 +42,7 @@ export const Tab = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.3}
     );
 
     const sections = tabs

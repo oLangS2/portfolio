@@ -2,7 +2,7 @@ import React from 'react'
 
 const career = () => {
   return (
-    <div className="section" id="career">
+    <div className="section" id="career" data-aos="fade-down">
       <div className="section_wrap career_wrap">
         <div className="title">
           📍 <br />

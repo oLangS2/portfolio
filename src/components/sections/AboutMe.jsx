@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutMe = () => {
   return (
-    <div className="section" id="about">
+    <div className="section" id="about" data-aos="fade-down">
       <div className="section_wrap about_wrap">
         <span className="title">
           👩‍💻<br />

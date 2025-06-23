@@ -8,7 +8,7 @@ import NotionSlide from '../notionSlide/NotionSlide';
 
 const notion = () => {
   return (
-    <div id="notion">
+    <div id="notion" data-aos="fade-down">
         <div className="notion_wrap">
           <div className="title">
             📝<br />
