@@ -61,7 +61,6 @@ const ProjectModal = ({ data, onClose }) => {
             {isLoading ? <ModalSkeleton/>
             : (
               <div className="content">
-                <span className='icon'>{data.icon}</span> 
                 <h4 className='project_title mb-30'>{data.title}</h4>
                 <div className='mb-30'>
                   <span className='sub_tite'>프로젝트 설명</span>

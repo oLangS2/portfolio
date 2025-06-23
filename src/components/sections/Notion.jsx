@@ -22,7 +22,18 @@ const notion = () => {
             }}
             spaceBetween={20}
             slidesPerView={3.5}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              769: {
+                slidesPerView: 3.5,
+              },
+            }}
             loop={false}
+            grabCursor={true}
+            simulateTouch={true}
+            allowTouchMove={true}
           >
             {noteData.map((p)=> (
                 <SwiperSlide key={p.id}>
