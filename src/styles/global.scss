@@ -1,15 +1,5 @@
 @charset "UTF-8";
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-style: normal;
-}
-@font-face {
-  font-family: 'Pretendard';
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/woff/Pretendard-Black.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-}
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 $white-0: #fff;
 $gray-0: #191F32;
 $gray-1: #4b586b;
@@ -38,7 +28,7 @@ html{
 body{
     line-height:1.5;
     color:$gray-0;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
 }
 nav,ol,ul{
     list-style:none;
@@ -50,7 +40,7 @@ input,button,textarea,select{
     margin:0;
     padding:0;
     border-radius: 0;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
     color:$gray-0;
     font-size:1rem;
 	&:not([type="checkbox"]):not([type="radio"]):not(select) {
