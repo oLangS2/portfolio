@@ -2,7 +2,7 @@
 const projectData = [
   {
     id: 0,
-    people:"PB 1",
+    people:"PB 4",
     link:"https://www.hddfs.com/shop/dm/main.do?NaPm=ct%3Dmi1a0dtc%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3Dnull%7Chk%3D0bf643dc3d08fa27fd946d9d55e4adff20915caa",
     title: "현대면세점 UX개선 및 이벤트 페이지 제작",
     company: "현대면세점",
@@ -21,6 +21,12 @@ const projectData = [
           descriptions: [
             "이벤트 정보(기간, 사은품, 조건 등)에 맞는 스크립트 아이디어 제안 및 구현",
             "디자인 템플릿 기반 퍼블리싱 가이드 제작으로 작업 효율 및 일관성 향상",
+          ]
+        },
+        {
+          title:"GA4 이벤트 태깅 적용",
+          descriptions: [
+            "주요 UI요소에 GA4 이벤트 태깅을 적용하고, 옴니버그(Omnibug)를 통해 정상 수집 여부를 확인"
           ]
         },
     ],
