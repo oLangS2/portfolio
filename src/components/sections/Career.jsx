@@ -11,7 +11,23 @@ const career = () => {
         <ul className='box_wrap'>
           <li className='box flex'>
             <div className="left">
-              24.06 - 24.03
+              25.08 - 재직중
+            </div>
+            <div className="right">
+              <b>키스템프엘비에스</b>
+              <span> 현대면세점 UX전략팀 · 사원 3년차 · 퍼블리셔</span>
+              <div className="more">
+                <ul>
+                  <li>로그인 페이지의 UX를 개선하여 사용자 흐름을 단순화하고 사용성을 향상</li>
+                  <li>이벤트 페이지 퍼블리싱을 담당하며 디자인 시안을 기반으로 반응형·웹표준을 준수한 마크업을 구현</li>
+                  <li>디자인 요소를 체계화한 템플릿 가이드를 제작해 협업 효율성과 UI 일관성 향상</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li className='box flex'>
+            <div className="left">
+              24.06 - 25.03
             </div>
             <div className="right">
               <b>(주) 리더마인</b>

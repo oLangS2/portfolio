@@ -24,9 +24,9 @@ function App() {
       <MainVisual />
       <Tab/>
       <AboutMe/>
-      <Career/>
       <Projects/>
       <Notion/>
+      <Career/>
       <Footer/>
     </div>
   );

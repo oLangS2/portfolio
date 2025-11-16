@@ -1,6 +1,32 @@
 
 const projectData = [
   {
+    id: 0,
+    people:"PB 1",
+    link:"https://www.hddfs.com/shop/dm/main.do?NaPm=ct%3Dmi1a0dtc%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3Dnull%7Chk%3D0bf643dc3d08fa27fd946d9d55e4adff20915caa",
+    title: "현대면세점 UX개선 및 이벤트 페이지 제작",
+    company: "현대면세점",
+    period: "25.08 - ",
+    account:"현대면세점 웹/앱 서비스의 UX 개선 및 유지보수를 담당하였으며, 기획·디자인팀과 협업하여 이벤트 페이지 퍼블리싱을 수행",
+    features: [
+        {
+          title: "웹/앱 서비스의 UX 개선",
+          descriptions: [
+            "로그인 페이지 UX 개선을 통해 사용성 향상 및 이탈률 감소",
+            "사용자 흐름 분석을 바탕으로 불필요한 요소 제거 및 인터페이스 최적화"
+          ]
+        },
+        {
+          title:"이벤트 페이지 퍼블리싱",
+          descriptions: [
+            "이벤트 정보(기간, 사은품, 조건 등)에 맞는 스크립트 아이디어 제안 및 구현",
+            "디자인 템플릿 기반 퍼블리싱 가이드 제작으로 작업 효율 및 일관성 향상",
+          ]
+        },
+    ],
+    tech: ["Eclipse", "Bitbuket", "Bamboo", "Figma", "CSS"],
+  },
+  {
     id: 1,
     people:"FE 3",
     link:"https://www.jinrotonic.com/",
