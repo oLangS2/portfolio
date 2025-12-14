@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const tabs = [
-  { id: 'main', label: '프롤로그' },
-  { id: 'about', label: '기술' },
-  { id: 'projects', label: '프로젝트' },
-  { id: 'notion', label: '노션' },
-  { id: 'career', label: '경력' },
-  { id: 'footer', label: '에필로그' },
+  { id: 'main', label: 'Home' },
+  { id: 'about', label: 'About' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'notion', label: 'Notion' },
+  { id: 'career', label: 'Career' },
+  { id: 'footer', label: 'End' },
 ];
 
 export const Tab = () => {
