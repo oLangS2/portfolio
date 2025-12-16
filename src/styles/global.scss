@@ -108,6 +108,33 @@ button {
 .mt-30{
     margin-top: 30px;
 }
+// _mixin.scss (또는 _interaction.scss)
+@mixin hover-underline(
+  $color: $gray-0,
+  $height: 1px,
+  $offset: -1px,
+  $duration: 0.5s
+) {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: $offset;
+    left: 0;
+    width: 100%;
+    height: $height;
+    background-color: $color;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform $duration ease;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
+  &:not(:hover)::after {
+    transform-origin: right;
+  }
+}
 //!SECTION 스타일 리셋
 
 .section{
@@ -190,7 +217,7 @@ button {
                     border-bottom: 1px solid $gray-3;
                     width: 70%;
                     word-break: keep-all;
-                    position: relative;
+                    @include hover-underline;
                     b{
                         font-size: 18px;
                     }
@@ -235,7 +262,7 @@ button {
                         width: 45px;
                         height: 45px;
                         border-radius: 5px;
-                        transition: 0.3s;
+                        transition: 0.5s;
                         &::after{
                             content: "";
                             position: absolute;
@@ -269,24 +296,6 @@ button {
                             }
                         }
                     }
-                    &::after{
-                        content: "";
-                        position: absolute;
-                        bottom: -1px;
-                        left: 0;
-                        width: 100%;
-                        height: 1px;
-                        background-color: $gray-0;
-                        transform: scaleX(0);
-                        transform-origin: left;
-                        transition: transform 0.3s ease;
-                    }
-                    &:hover::after{
-                        transform: scaleX(1);
-                    }
-                    &:not(:hover)::after {
-                        transform-origin: right;
-                      }
                     &:hover .more_btn{
                         background-color: $gray-0;
                         &::after{
