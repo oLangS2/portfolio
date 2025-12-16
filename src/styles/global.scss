@@ -108,7 +108,6 @@ button {
 .mt-30{
     margin-top: 30px;
 }
-// _mixin.scss (또는 _interaction.scss)
 @mixin hover-underline(
   $color: $gray-0,
   $height: 1px,
@@ -143,20 +142,26 @@ button {
 
     //SECTION 메인
     .main_visual{
-        padding: 200px 0 100px;
-
-        h2{
-            font-size: 3rem;
-            font-weight: 700;
-            span{
-                color: $point;
+        width: 100%;
+        height: 100vh;
+        .txt_wrap{
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            h2{
+                font-size: 3rem;
+                font-weight: 700;
+                span{
+                    color: $point;
+                }
             }
         }
     }
     //!SECTION 메인
     //SECTION 섹션 공통
     .section_wrap{
-        padding: 50px 0px;
+        padding: 100px 0px;
         .title{
             font-size: 5rem;
             font-weight: 700;
@@ -167,43 +172,66 @@ button {
     //!SECTION 섹션 공통
     //SECTION 기술
     .about_wrap{
-        padding: 100px 0;
-        .box{
-            background: $gray-6;
-            box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.08);
-            flex:1;
-            padding: 50px 30px;
-            border-radius: 10px;
-            transition: 0.3s;
-            &:hover{
-                transform: scale(1.02);
-            }
-            span{
-                font-size: 10px;
-                color: $gray-1;
-                background-color: $gray-4;
-                border-radius: 100px;
-                padding:2px 8px;
-                display: block;
-                width: max-content;
-                margin: 0 auto 10px;
-            }
-            strong{
-                font-size: 18px;
-                font-weight: 600;
-            }
-            p{
-                padding-top: 30px;
-                word-break: keep-all;
-                color: $gray-0;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 100px;
+        .left{
+            position: sticky;
+            top: 100px;
+            h2{
+                font-size: 2rem;
+                text-align: right;
             }
         }
+        .right{
+            .box{
+                width: 500px;
+                height: 300px;
+                background-color: rgb(252, 223, 228);
+                box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.08);
+                padding: 50px;
+                border-radius: 10px;
+                transition: 0.5s;
+                position: sticky;
+                top: 100px;
+                margin-top: 50px;
+                &.box1{
+                    margin-top: 0;
+                }
+                &.box2{
+                    background-color: rgb(255, 246, 203);
+                }
+                &.box3{
+                    background-color: rgb(197, 237, 247);
+                }
+
+                span{
+                    font-size: 12px;
+                    color: $gray-1;
+                    background-color: $white-0;
+                    border-radius: 100px;
+                    padding:3px 12px;
+                    display: block;
+                    width: max-content;
+                    margin-bottom: 10px;
+                }
+                strong{
+                    font-size: 28px;
+                    font-weight: 600;
+                }
+                p{
+                    padding-top: 40px;
+                    word-break: keep-all;
+                    color: $gray-0;
+                }
+            }
+        }
+
     }
     //!SECTION 기술
     //SECTION 경력
     .career_wrap{
         .box_wrap{
-            padding-top: 100px;
             .box{
                 .left{
                     padding: 30px 0;
@@ -396,158 +424,158 @@ button {
         }
     }
     //!SECTION 프로젝트
-}
-//SECTION 노션
-.notion_wrap{
-    margin: 100px 0 0;
-    padding: 50px 0 150px;
-    position: relative;
-    overflow: hidden;
-    
-    .title{
-        font-size: 1.6rem;
-        font-weight: 700;
-        margin: 50px 0 30px;
-        display: block;
-        text-align: center;
-    }
-    
-    .swiper{
-        padding-left: 20vw;
-        overflow: visible;
-        -ms-overflow-style: none;
-        &::-webkit-scrollbar{
-            display:none;
-        }
-        &:hover{
-            .custom-next,.custom-prev{
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        .swiper-slide{
-            .box{
-                padding: 30px;
-                height: 320px;
-                border-radius: 10px;
-                text-align: left;
-                position: relative;
-                overflow: hidden;
-                display: block;
-                box-shadow: 2px 4px 12px #00000025;
-                transition: all .3s cubic-bezier(0,0,.5,1);
-                &:hover{
-                    box-shadow: 2px 4px 16px #00000040;
-                    transform: scale(1.01);
-                }
-                .bg{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: -1;
-                    opacity: 0.05;
-                }
-            }
-            p{
-                font-weight: 600;
-                font-size: 20px;
-                margin-bottom: 10px;
-            }
-            span{
-                font-size: 14px;
-            }
-            .icon{
-                position: absolute;
-                bottom: 30px;
-                svg{
-                    margin-left: 10px;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
-        }
-    }
-
-    .navigation_wrap{
-        z-index: 9;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 50px;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        .custom-prev,.custom-next{
-            cursor: pointer;
-            position: absolute;
-            transform: scale(0.8);
-            opacity: 0;
-            transition: 0.3s;
-            width: 50px;
-            height: 50px;
-            border: 1px solid $gray-4;
-            border-radius: 100%;
-            background-color: $white-0;
-            box-shadow: 0 .6px .6px -1.25px rgba(0, 0, 0, .12), 0 2.2px 2.2px -2.5px rgba(0, 0, 0, .1), 0 10px 10px -3.75px rgba(0, 0, 0, .0425);
-            svg{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%);
-            }
-        }
-        .custom-prev{
-            left: 30px;
-        }
-        .custom-next{
-            right: 30px;
-        }
-    }
-
-}
-//!SECTION 노션
-//SECTION 푸터
-.footer_wrap{
-    padding: 200px 0;
-    text-align: center;
-    .box{
-        background-color: $white-0;
-        width: 60vw;
-        margin: auto;
-        border-radius: 20px;
-        padding: 100px 0;
+    //SECTION 노션
+    .notion_wrap{
+        padding: 50px 0 150px;
+        position: relative;
+        overflow: hidden;
+        
         .title{
             font-size: 1.6rem;
             font-weight: 700;
+            margin: 50px 0 30px;
             display: block;
-            margin-bottom: 20px;
+            text-align: center;
         }
-        p{
-            margin-bottom: 50px;
-        }
-
-        a{
-            border: 1px solid $gray-4;
-            color: $gray-0;
-            font-size: 14px;
-            padding: 12px 24px;
-            font-weight: 400;
-            border-radius: 100px;
-            background-color: $white-0;
-            &.notion_link{
-                background-color: $point;
-                border: 1px solid  $point;
-                color: $white-0;
-                margin-right: 20px;
+        
+        .swiper{
+            padding-left: 20vw;
+            overflow: visible;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar{
+                display:none;
+            }
+            &:hover{
+                .custom-next,.custom-prev{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+            .swiper-slide{
+                .box{
+                    padding: 30px;
+                    height: 320px;
+                    border-radius: 10px;
+                    text-align: left;
+                    position: relative;
+                    overflow: hidden;
+                    display: block;
+                    box-shadow: 2px 4px 12px #00000025;
+                    transition: all .3s cubic-bezier(0,0,.5,1);
+                    &:hover{
+                        box-shadow: 2px 4px 16px #00000040;
+                        transform: scale(1.01);
+                    }
+                    .bg{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                        opacity: 0.05;
+                    }
+                }
+                p{
+                    font-weight: 600;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+                span{
+                    font-size: 14px;
+                }
+                .icon{
+                    position: absolute;
+                    bottom: 30px;
+                    svg{
+                        margin-left: 10px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
             }
         }
+
+        .navigation_wrap{
+            z-index: 9;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            .custom-prev,.custom-next{
+                cursor: pointer;
+                position: absolute;
+                transform: scale(0.8);
+                opacity: 0;
+                transition: 0.3s;
+                width: 50px;
+                height: 50px;
+                border: 1px solid $gray-4;
+                border-radius: 100%;
+                background-color: $white-0;
+                box-shadow: 0 .6px .6px -1.25px rgba(0, 0, 0, .12), 0 2.2px 2.2px -2.5px rgba(0, 0, 0, .1), 0 10px 10px -3.75px rgba(0, 0, 0, .0425);
+                svg{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+            .custom-prev{
+                left: 30px;
+            }
+            .custom-next{
+                right: 30px;
+            }
+        }
+
     }
-    
+    //!SECTION 노션
+    //SECTION 푸터
+    .footer_wrap{
+        padding: 200px 0;
+        text-align: center;
+        .box{
+            background-color: $white-0;
+            width: 60vw;
+            margin: auto;
+            border-radius: 20px;
+            padding: 100px 0;
+            .title{
+                font-size: 1.6rem;
+                font-weight: 700;
+                display: block;
+                margin-bottom: 20px;
+            }
+            p{
+                margin-bottom: 50px;
+            }
+
+            a{
+                border: 1px solid $gray-4;
+                color: $gray-0;
+                font-size: 14px;
+                padding: 12px 24px;
+                font-weight: 400;
+                border-radius: 100px;
+                background-color: $white-0;
+                &.notion_link{
+                    background-color: $point;
+                    border: 1px solid  $point;
+                    color: $white-0;
+                    margin-right: 20px;
+                }
+            }
+        }
+        
+    }
+    //!SECTION 푸터
 }
-//!SECTION 푸터
+
 //SECTION 탭
 .tab_container {
     display: flex;

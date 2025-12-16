@@ -8,10 +8,9 @@ import NotionSlide from '../notionSlide/NotionSlide';
 
 const notion = () => {
   return (
-    <div id="notion" data-aos="fade-down">
+    <div className="section" id="notion" data-aos="fade-down">
         <div className="notion_wrap">
           <div className="title">
-            📝<br />
             업무에 필요한 팁과 문제해결 과정을 기록하고 공유합니다.
           </div>
           <Swiper
