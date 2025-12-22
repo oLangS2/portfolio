@@ -4,7 +4,7 @@ const tabs = [
   { id: 'main', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
-  { id: 'notion', label: 'Notion' },
+  { id: 'docs', label: 'Docs' },
   { id: 'career', label: 'Career' },
   { id: 'footer', label: 'End' },
 ];

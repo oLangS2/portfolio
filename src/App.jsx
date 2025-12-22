@@ -2,7 +2,7 @@ import MainVisual from './components/sections/MainVisual';
 import AboutMe from './components/sections/AboutMe';
 import Projects from './components/sections/Projects';
 import Career from './components/sections/Career';
-import Notion from './components/sections/Notion';
+import Docs from './components/sections/Docs';
 import Footer from './components/sections/Footer';
 import './styles/global.scss';
 import { Tab } from './components/common/Tab';
@@ -25,7 +25,7 @@ function App() {
       <Tab/>
       <AboutMe/>
       <Projects/>
-      <Notion/>
+      <Docs/>
       <Career/>
       <Footer/>
     </div>

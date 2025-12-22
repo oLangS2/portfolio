@@ -42,9 +42,9 @@ const Career = () => {
   ];
 
   return (
-    <div className="section" id="career" data-aos="fade-down">
+    <div className="section" id="career" data-aos="fade-up">
       <div className="section_wrap career_wrap">
-        <div className="title">Career</div>
+        <header className="title">Career</header>
         <ul className="box_wrap">
           {careerData.map((item, i) => (
             <li className="box flex" key={i}>

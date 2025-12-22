@@ -26,7 +26,7 @@ html{
     font-size:16px;
 }
 body{
-    background-color: $gray-5;
+    background-color: $gray-6;
     line-height:1.5;
     color:$gray-0;
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
@@ -112,7 +112,7 @@ button {
   $color: $gray-0,
   $height: 1px,
   $offset: -1px,
-  $duration: 0.5s
+  $duration: 0.3s
 ) {
   position: relative;
   &::after {
@@ -133,6 +133,16 @@ button {
   &:not(:hover)::after {
     transform-origin: right;
   }
+}
+@mixin hover-arrow{
+    &:hover .icon_box .icon::after {
+        left: 150%;
+        opacity: 0;
+    }
+    &:hover .icon_box .icon::before {
+        left: 50%;
+        opacity: 1;
+    }
 }
 //!SECTION 스타일 리셋
 
@@ -229,116 +239,6 @@ button {
 
     }
     //!SECTION 기술
-    //SECTION 경력
-    .career_wrap{
-        .box_wrap{
-            .box{
-                .left{
-                    padding: 30px 0;
-                    width:30%;
-                    font-size: 1.6rem;
-                    font-weight: 600;
-                }
-                .right{
-                    cursor: pointer;
-                    padding: 30px 0;
-                    border-bottom: 1px solid $gray-3;
-                    width: 70%;
-                    word-break: keep-all;
-                    @include hover-underline;
-                    b{
-                        font-size: 18px;
-                    }
-                    p{
-                        color: $gray-1;
-                        padding-top: 10px;
-                    }
-                    .more{
-                        max-height: 0;
-                        overflow: hidden;
-                        transform: translateY(30px);
-                        transition: 0.5s ease-out;
-                        opacity: 0;
-                        &.active {
-                            padding-top: 20px;
-                            max-height: 500px;
-                            opacity: 1;
-                            transform: translateY(0px);
-                          }
-                        li{
-                            position: relative;
-                            color: $gray-1;
-                            padding-left: 30px;
-                        }
-                        li:before{
-                            content: "";
-                            width: 5px;
-                            height: 1px;
-                            position: absolute;
-                            top: 50%;
-                            left: 10px;
-                            background-color: $gray-1;
-                            transform: translateY(-50%);
-                        }
-                    }
-                    .more_btn{
-                        position: absolute;
-                        right: 30px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        border: 1px solid $gray-0;
-                        width: 45px;
-                        height: 45px;
-                        border-radius: 5px;
-                        transition: 0.5s;
-                        &::after{
-                            content: "";
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%,-50%);
-                            width: 15px;
-                            height: 1px;
-                            background-color: $gray-0;
-                            transition: 0.3s;
-                        }
-                        &::before{
-                            content: "";
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%,-50%);
-                            width: 1px;
-                            height: 15px;
-                            background-color: $gray-0;
-                            transition: 0.3s;
-                        }
-                        &.active{
-                            background-color: $gray-0;
-                            &::after{
-                                background-color: #fff;
-                            }
-                            &::before{
-                                background-color: #fff;
-                                transform: translate(-50%,-50%) rotate(90deg);
-                            }
-                        }
-                    }
-                    &:hover .more_btn{
-                        background-color: $gray-0;
-                        &::after{
-                            background-color: #fff;
-                        }
-                        &::before{
-                            background-color: #fff;
-                            transform: translate(-50%,-50%) rotate(90deg);
-                        }
-                    }
-                }
-            }
-        }
-    }
-    //!SECTION 경력
     //SECTION 프로젝트
     .projects_wrap{
         .card_wrap{
@@ -426,115 +326,212 @@ button {
     //!SECTION 프로젝트
     //SECTION 노션
     .notion_wrap{
-        padding: 50px 0 150px;
-        position: relative;
-        overflow: hidden;
-        
-        .title{
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin: 50px 0 30px;
-            display: block;
-            text-align: center;
-        }
-        
-        .swiper{
-            padding-left: 20vw;
-            overflow: visible;
-            -ms-overflow-style: none;
-            &::-webkit-scrollbar{
-                display:none;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .left{
+            position: sticky;
+            top: 100px;
+            width: 30%;
+            .title{
+                margin: 0;
             }
-            &:hover{
-                .custom-next,.custom-prev{
-                    opacity: 1;
-                    transform: scale(1);
-                }
-            }
-            .swiper-slide{
-                .box{
-                    padding: 30px;
-                    height: 320px;
-                    border-radius: 10px;
-                    text-align: left;
-                    position: relative;
-                    overflow: hidden;
-                    display: block;
-                    box-shadow: 2px 4px 12px #00000025;
-                    transition: all .3s cubic-bezier(0,0,.5,1);
-                    &:hover{
-                        box-shadow: 2px 4px 16px #00000040;
-                        transform: scale(1.01);
-                    }
-                    .bg{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        z-index: -1;
-                        opacity: 0.05;
-                    }
-                }
-                p{
-                    font-weight: 600;
-                    font-size: 20px;
+            .tab_nav{
+                margin-top: 20px;
+                li{
+                    cursor: pointer;
+                    width: max-content;
+                    text-align: center;
+                    background-color: $gray-3;
+                    color: $white-0;
+                    padding: 10px 20px;
+                    border-radius: 5px;
                     margin-bottom: 10px;
+                    font-size: 18px;
+                    transition: 0.3s;
+                    &.active,&:hover{
+                        background-color: $gray-0;
+                    }
                 }
-                span{
+            }
+        }
+        article{
+            width: 70%;
+            li a{
+                display: block;
+                padding: 50px 0;
+                border-bottom: 1px solid $gray-3;
+                word-break: keep-all;
+                position: relative;
+                @include hover-underline;
+                @include hover-arrow;
+                p{
+                    font-size: 18px;
+                    padding-bottom: 50px;
+                }
+                .cate{
+                    background-color: $gray-3;
+                    color: $white-0;
+                    padding: 5px 15px;
+                    display: inline-block;
+                    border-radius: 5px;
+                    margin-bottom: 5px;
                     font-size: 14px;
                 }
-                .icon{
+                span{
+                    display: block;
+                    font-size: 14px;
+                    color: $gray-1;
+                }
+                .icon_box{
+                    background-color: $gray-0;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 5px;
                     position: absolute;
-                    bottom: 30px;
-                    svg{
-                        margin-left: 10px;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    .icon{
                         position: absolute;
                         top: 50%;
-                        transform: translateY(-50%);
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        overflow: hidden;
+                        width: 15px;
+                        height: 15px;
+                        &::after,&::before{
+                            content: "";
+                            width: 15px;
+                            height: 15px;
+                            background: url("../assets/images/arrow_r.svg")no-repeat center center;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            transition: 0.3s;
+                        }
+                        &::before{
+                            left: -100%;
+                            opacity: 0;
+                            transition: 0.5s;
+                        }
                     }
                 }
             }
         }
-
-        .navigation_wrap{
-            z-index: 9;
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 50px;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            .custom-prev,.custom-next{
-                cursor: pointer;
-                position: absolute;
-                transform: scale(0.8);
-                opacity: 0;
-                transition: 0.3s;
-                width: 50px;
-                height: 50px;
-                border: 1px solid $gray-4;
-                border-radius: 100%;
-                background-color: $white-0;
-                box-shadow: 0 .6px .6px -1.25px rgba(0, 0, 0, .12), 0 2.2px 2.2px -2.5px rgba(0, 0, 0, .1), 0 10px 10px -3.75px rgba(0, 0, 0, .0425);
-                svg{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                }
-            }
-            .custom-prev{
-                left: 30px;
-            }
-            .custom-next{
-                right: 30px;
-            }
-        }
-
     }
     //!SECTION 노션
+    //SECTION 경력
+    .career_wrap{
+        .box_wrap{
+            .box{
+                .left{
+                    padding: 30px 0;
+                    width:30%;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                }
+                .right{
+                    cursor: pointer;
+                    padding: 30px 0;
+                    border-bottom: 1px solid $gray-3;
+                    width: 70%;
+                    word-break: keep-all;
+                    @include hover-underline;
+                    b{
+                        font-size: 18px;
+                    }
+                    p{
+                        color: $gray-1;
+                        padding-top: 10px;
+                    }
+                    .more{
+                        max-height: 0;
+                        overflow: hidden;
+                        transform: translateY(30px);
+                        transition: 0.5s ease-out;
+                        opacity: 0;
+                        &.active {
+                            padding-top: 20px;
+                            max-height: 500px;
+                            opacity: 1;
+                            transform: translateY(0px);
+                            }
+                        li{
+                            position: relative;
+                            color: $gray-1;
+                            padding-left: 30px;
+                        }
+                        li:before{
+                            content: "";
+                            width: 5px;
+                            height: 1px;
+                            position: absolute;
+                            top: 50%;
+                            left: 10px;
+                            background-color: $gray-1;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    .more_btn{
+                        position: absolute;
+                        right: 30px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        border: 1px solid $gray-0;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 5px;
+                        transition: 0.5s;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            width: 15px;
+                            height: 1px;
+                            background-color: $gray-0;
+                            transition: 0.3s;
+                        }
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            width: 1px;
+                            height: 15px;
+                            background-color: $gray-0;
+                            transition: 0.3s;
+                        }
+                        &.active{
+                            background-color: $gray-0;
+                            &::after{
+                                background-color: #fff;
+                            }
+                            &::before{
+                                background-color: #fff;
+                                transform: translate(-50%,-50%) rotate(90deg);
+                            }
+                        }
+                    }
+                    &:hover .more_btn{
+                        background-color: $gray-0;
+                        &::after{
+                            background-color: #fff;
+                        }
+                        &::before{
+                            background-color: #fff;
+                            transform: translate(-50%,-50%) rotate(90deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //!SECTION 경력
     //SECTION 푸터
     .footer_wrap{
         padding: 200px 0;
@@ -814,11 +811,6 @@ button {
         }
     }
     .notion_wrap{
-        .title{
-            font-size: 1.4rem;
-            width: 80vw;
-            margin: 50px auto 30px;
-        }
         .swiper{
             padding-left: 0;
             width: 80vw;
@@ -919,5 +911,3 @@ button {
     } 
   }
 //!SECTION 반응형 (768px 이하 모바일 대응)
-
-   
