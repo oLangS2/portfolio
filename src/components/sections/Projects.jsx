@@ -12,7 +12,7 @@ const Projects = () => {
 
   return (
     <>
-      <div className="section" id="projects" data-aos="fade-down">
+      <div className="section" id="projects" data-aos="fade-up">
         <div className="section_wrap projects_wrap">
           <div className="title">
             Projects

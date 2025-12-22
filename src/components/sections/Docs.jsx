@@ -36,7 +36,7 @@ const Docs = () => {
           <article>
             <ul>
               {filterData.map((item,i) => (
-                <li key={i}>
+                <li key={i} data-aos="fade-up">
                   <a href={item.link} target='_blank' rel="noopener noreferrer">
                     <p>{item.title}</p>
                     <div className="cate">{item.category}</div>

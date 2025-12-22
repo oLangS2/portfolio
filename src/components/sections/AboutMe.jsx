@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutMe = () => {
   return (
-    <div className="section" id="about" data-aos="fade-down">
+    <div className="section" id="about" data-aos="fade-up">
       <div className="section_wrap about_wrap flex">
         <div className="left">
           <h2>일관된 가치로<br />개발하고 있습니다.</h2>
