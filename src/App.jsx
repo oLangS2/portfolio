@@ -9,6 +9,7 @@ import { Tab } from './components/common/Tab';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import Popup from './components/common/Popup';
 
 function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
   
   return (
     <div>
+      <Popup />
       <MainVisual />
       <Tab/>
       <AboutMe/>
