@@ -8,7 +8,7 @@ const Projects = () => {
   const [moreProject, setMoreProject] = useState(false);
 
   //더보기 버튼 상태값에 따른 프로젝트 개수 데이터 잘라내기
-  const visibleProjects = moreProject ? projectData : projectData.slice(0,6);
+  const visibleProjects = moreProject ? projectData : projectData.slice(0,8);
 
   return (
     <>

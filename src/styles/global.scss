@@ -296,85 +296,44 @@ button {
     //SECTION 프로젝트
     .projects_wrap{
         .card_wrap{
-            padding: 0 0 50px 0;
+            padding: 0 0 100px 0;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap: 20px;
-            grid-row-gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-column-gap: 30px;
+            grid-row-gap: 100px;
             .card{
                 cursor: pointer;
-                border: 1px solid $gray-4;
-                border-radius: 10px;
-                padding: 30px 20px;
-                height:260px;
                 text-align: left;
                 position: relative;
-                transition: 0.3s;
-                .icon{
-                    font-size: 30px;
+                img{
+                    width: 100%;
+                    height: 230px;
+                    background-color: $gray-4;
+                    border-radius: 10px;
+                    overflow: hidden;
                 }
-                span{
-                    font-size: 12px;
-                    color: $gray-2;
-                    display: block;
+                h3{
+                    margin-top: 20px;
+                    padding-left: 10px;
                 }
                 p{
-                    margin-top: 20px;
-                    font-size: 16px;;
-                }
-                .detail_more{
-                    padding: 10px;
-                    border: 1px solid $gray-4;
-                    border-radius: 100px;
-                    font-size: 12px;
-                    position: absolute;
-                    bottom: 30px;
-                    font-weight: 600;
-                    color: $gray-2;
-                }
-                &:hover{
-                    border: $white-0;
-                    background-color: $point;
-                    color:$white-0;
-                    transform: translateY(-3px);
-                    span{
-                        color: $white-0;
-                    }
-                    .detail_more{
-                        color: $gray-0;
-                        border: 1px solid $white-0;
-                        background-color: $white-0;
-                    }
+                    margin-top: 10px;
+                    padding-left: 10px;
+                    font-size: 16px;
                 }
             }
         }
         .more_project{
-            border: 1px solid $gray-4;
-            color: $gray-0;
-            font-size: 14px;
-            padding: 12px 24px;
-            font-weight: 400;
-            border-radius: 100px;
+            background-color: $gray-0;
+            color: $white-0;
+            font-size: 18px;
+            padding: 15px 35px;
+            font-weight: 500;
+            border-radius: 5px;
             position: relative;
             overflow: hidden;
-            &::after{
-                content:"";
-                position: absolute;
-                top: 0;
-                left: -100%;
-                background-color: $gray-0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                transition: 0.3s;
-            }
-            &:hover{
-                color: $white-0;
-                border: 1px solid $gray-0;
-                &::after{
-                    left: 0;
-                }
-            }
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
     //!SECTION 프로젝트
@@ -660,23 +619,21 @@ button {
     z-index: 101;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     position: fixed;
     top: 0;
     left: 0;
     .modal{
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        width: 60vw;
-        max-height: 70vh;
+        bottom: 0%;
+        width: 100%;
+        max-height: 80vh;
         height: 100%;
         .close{
             position: absolute;
             right: 0;
             top: -80px;
+            right: 50px;
             svg{
                 background-color: $white-0;
                 padding: 10px;
@@ -685,11 +642,16 @@ button {
         }
         .bg{
             overflow-y: scroll;
+            scrollbar-width: none;     /* Firefox */
+            -ms-overflow-style: none;  /* IE, Edge Legacy */
             height: 100%;
             background: $white-0;
             border-radius: 20px;
             padding: 50px;
             word-break: break-all;
+            ::-webkit-scrollbar {
+                display: none;             /* Chrome, Safari, Edge */
+              }
             .icon{
                 font-size: 50px;
                 display: block;
