@@ -747,20 +747,19 @@ button {
 }
 //!SECTION 프로젝트 모달 스켈레톤UI
 
-//SECTION 팝업
+//SECTION 오늘하루보지않기 팝업
 .popup {
     position: fixed;
-    right: 24px;
-    bottom: 24px;
+    right:30px;
+    bottom: 30px;
     width: 500px;
-    background: rgba($point, 0.03);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: $gray-5;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transform: translateY(120%);
+    transform: translateY(50%);
     opacity: 0;
-    transition: transform 0.6s ease, opacity 0.4s ease;
+    transition: 0.3s ease-in;
+    transition-delay: 1s;
     z-index: 9999;
     overflow: hidden;
   
@@ -770,7 +769,7 @@ button {
     }
     
     header{
-        background-color: rgba($point, 0.8);
+        background-color: rgba($point, 0.9);
         padding: 20px;
         color: $white-0;
         justify-content: space-between;
