@@ -7,7 +7,7 @@ const ProjectCard = ({ data, onClick }) => {
       <div className="desc">
         <img src="" alt="" />
         <h3>{data.company}</h3>
-        <p>{data.title}</p>
+        <p>{data.title}</p>``
       </div>
     </div>
   );
