@@ -1,0 +1,36 @@
+@use '../../styles/reset'; 
+@use '../../styles/variables' as var;
+
+.weather-banner + .header{
+    top: 40px;
+}
+.header{
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px; 
+    z-index: 999;
+    background: var.$gray-6;
+
+    &__logo{
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        .point{
+            color:var.$point-light;
+            font-size: 30px;
+            line-height: 24px;
+        }
+    }
+
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

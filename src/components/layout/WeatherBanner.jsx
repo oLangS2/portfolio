@@ -11,7 +11,7 @@ export default function WeatherBanner() {
   if (!visible || error) return null
 
   return (
-    <div className="weather-banner">
+    <div className={visible ? `weather-banner` : `weather-banner has-banner`}>
 
       <div className="weather-banner__left">
         <div className="weather-banner__icon-box">
