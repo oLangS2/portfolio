@@ -1,0 +1,40 @@
+@use '../../styles/variables';
+
+@mixin flex-center-fixed {
+	position: fixed;
+	pointer-events: none;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+  
+.cursor-dot {
+	@include flex-center-fixed;
+	width: 12px;
+	height: 12px;
+	background: variables.$point-light;
+	z-index: 9999;
+	transition: width .2s, height .2s, background .2s;
+}
+  
+.cursor-ring {
+	@include flex-center-fixed;
+	width: 32px;
+	height: 32px;
+	border: 1px solid variables.$point-light;
+	z-index: 9998;
+	transition: width .25s, height .25s;
+	opacity: .5;
+}
+  
+body.cursor-hover {
+	.cursor-dot {
+	  width: 24px; 
+	  height: 24px;
+    opacity: .4;
+	}
+	
+	.cursor-ring {
+	  width: 42px; 
+	  height: 42px;
+	}
+}

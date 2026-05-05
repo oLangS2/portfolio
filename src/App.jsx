@@ -1,4 +1,5 @@
-import './styles/global.scss';
+import './styles/main.scss';
+
 import Cursor from './components/common/Cursor'
 import WeatherBanner from './components/layout/WeatherBanner'
 import Header from './components/layout/Header'

@@ -1,0 +1,82 @@
+@use '../../styles/variables' as var;
+
+.weather-banner {
+  width: 100%;
+  background: var.$gray-1; 
+  padding: 6px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__icon-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__tag {
+    font-size: 12px;
+    color: var.$white-0;
+    opacity: 0.8;
+    font-weight:700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 12px;
+    color: var.$white-0;
+  }
+
+  &__right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__temp {
+    font-size: 13px;
+    font-weight: 600;
+    color: var.$white-0;
+    background: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid var.$gray-3;
+    border-radius: 4px;
+    padding: 2px 10px;
+  }
+
+  &__pill {
+    font-size: 11px;
+    color: var.$gray-4;
+    background:  rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 2px 10px;
+    white-space: nowrap;
+  }
+
+  &__close-btn {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var.$white-0;
+    }
+  }
+}

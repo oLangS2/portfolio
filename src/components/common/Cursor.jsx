@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import "./Cursor.css"
+import "./Cursor.scss"
 
 export default function Cursor() {
   const dotRef  = useRef(null)
@@ -34,7 +34,6 @@ export default function Cursor() {
     const addHover    = () => document.body.classList.add('cursor-hover')
     const removeHover = () => document.body.classList.remove('cursor-hover')
 
-    // 동적으로 추가되는 요소 대응 — document에 위임
     document.addEventListener('mousemove', onMove)
     document.addEventListener('mouseover', (e) => {
       if (e.target.closest('a, button, [data-hover]')) addHover()

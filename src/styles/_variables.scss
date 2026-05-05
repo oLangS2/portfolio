@@ -1,0 +1,25 @@
+$white-0: #ffffff;
+$gray-0: #0f0f1a;
+$gray-1: #1a1a2e;
+$gray-2: #4a4a6a;
+$gray-3: #9898b8;
+$gray-4: #e0e0f0;
+$gray-5: #f0f0f8;
+$gray-6: #f8f8fc;
+$point: #4f39d8;
+$point-light: #6d5aed;
+$point-dark: #3730a3;
+
+:root {
+  --white-0: #{$white-0};
+  --gray-0: #{$gray-0};
+  --gray-1: #{$gray-1};
+  --gray-2: #{$gray-2};
+  --gray-3: #{$gray-3};
+  --gray-4: #{$gray-4};
+  --gray-5: #{$gray-5};
+  --gray-6: #{$gray-6};
+  --point: #{$point};
+  --point-light: #{$point-light};
+  --point-dark: #{$point-dark};
+}
