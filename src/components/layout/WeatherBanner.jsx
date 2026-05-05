@@ -7,11 +7,12 @@ export default function WeatherBanner() {
   const { weather, city, error } = useWeather();
   const [visible, setVisible] = useState(true)
 
+  // error 시 배너 닫기
   if (!visible || error) return null
 
   return (
     <div className="weather-banner">
-      
+
       <div className="weather-banner__left">
         <div className="weather-banner__icon-box">
           <WeatherIcon type={weather?.icon ?? 'sun'} />
