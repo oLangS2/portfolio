@@ -7,4 +7,16 @@ body {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+}
+html {
+    scrollbar-width: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
