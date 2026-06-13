@@ -5,9 +5,8 @@ import WeatherBanner from './components/layout/WeatherBanner'
 import Header from './components/layout/Header'
 import MainVisual from './components/sections/MainVisual'
 import Projects from './components/sections/Projects'
-import Skills from './components/sections/Skills'
 import Carrer from './components/sections/Carrer'
-import Footer from './components/layout/Footer'
+import Contact from './components/sections/Contact'
 
 
 function App() {
@@ -21,9 +20,8 @@ function App() {
         <MainVisual />
         <Carrer />
         <Projects />
-        <Skills />
+        <Contact />
       </main>
-      <Footer />
     </>
   );
 }

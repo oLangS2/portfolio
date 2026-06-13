@@ -11,7 +11,7 @@ export default function Header() {
       </div>
       <nav>
         <ul className='header__list'>
-          <li className='header__item'>skill</li>
+          <li className='header__item'>Carrer</li>
           <li className='header__item'>project</li>
           <li className='header__item'>contact</li>
         </ul>

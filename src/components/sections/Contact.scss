@@ -1,0 +1,65 @@
+@use '../../styles/variables' as var;
+
+.contact {
+    padding: 100px 0px 0;
+  
+    &__inner {
+      max-width: 60vw;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    &__eyebrow {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--point);
+      margin-bottom: 12px;
+    }
+  
+    &__title {
+      font-size: 36px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 48px;
+    }
+
+    &__btn-flex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    &__btn {
+        display: inline-block;
+        margin-top: 40px;
+        padding: 14px 30px;
+        color: var(--gray-0);
+        border: 1px solid var(--gray-4);
+        border-radius: 100px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 100px;
+
+        &.email{
+            border: 1px solid var(--point);
+            background-color: var(--point);
+            color: var(--white-0);
+        }
+        &.download{
+            border: 1px solid var(--point-light);
+            color: var(--point-light);
+        }
+    }
+}
+
+footer{
+    margin-top: 40px;
+    border-top: 1px solid var(--gray-4);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 12px;
+    color: var(--gray-3);
+}
