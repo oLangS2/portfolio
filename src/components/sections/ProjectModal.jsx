@@ -84,6 +84,12 @@ export default function ProjectModal({ project, onClose }) {
             ))}
           </div>
 
+          <div className="modal__tags">
+            {project.tags.map((tag, i) => (
+              <span key={i} className="modal__tag">{tag}</span>
+            ))}
+          </div>
+
           {/* 링크 */}
           <div className="modal__links">
             {links.github && <a href={links.github} className="modal__link" target="_blank" rel="noreferrer">GitHub ↗</a>}
