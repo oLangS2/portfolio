@@ -25,8 +25,8 @@ $point-dark: #3730a3;
   --point: #{$point};
   --point-light: #{$point-light};
   --point-dark: #{$point-dark};
+  color-scheme: light;
 }
-
 
 /* 다크모드 */
 [data-theme='dark'] {
@@ -43,4 +43,5 @@ $point-dark: #3730a3;
   --point: #6d5aed;
   --point-light: #8f7fff;
   --point-dark: #4f39d8;
+  color-scheme: dark;
 }

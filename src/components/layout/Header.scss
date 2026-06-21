@@ -12,10 +12,12 @@
     position: sticky;
     top: 0px; 
     z-index: 999;
-    background: rgba(255,255,255,.1);
+    background: rgba(255,255,255,.05);
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    transition: background .4s ease,
+    backdrop-filter .4s ease;
 
     &__logo{
         font-family: 'Syne', sans-serif;
@@ -45,7 +47,7 @@
     
         /* 다크 활성 */
         &.is-dark {
-          background: var(--gray-1);
+          background: var(--gray-3);
     
           .header__theme-sun {
             opacity: .0;
@@ -85,7 +87,7 @@
         width: 24px;
         height: 24px;
         border-radius: 50%;
-        background: var(--white-0);
+        background: var.$white-0;
         box-shadow: 0 2px 8px rgba(0,0,0,.2);
         transition: .3s;
       }

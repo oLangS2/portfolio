@@ -17,6 +17,18 @@ html {
     scrollbar-width: none;
     scroll-behavior: smooth;
 }
+body,
+header,
+section,
+div,
+button,
+a {
+  transition:
+    background .35s ease,
+    color .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+}
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
