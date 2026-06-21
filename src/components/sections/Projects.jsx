@@ -46,7 +46,7 @@ export default function Projects() {
   }, [activeId])
 
   return (
-    <section className="projects" id="projects">
+    <section className="projects" id="project">
       <div className="projects__inner">
 
         <p className="projects__eyebrow">Projects</p>

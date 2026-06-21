@@ -11,7 +11,9 @@ $point-light: #6d5aed;
 $point-dark: #3730a3;
 
 :root {
+  /* Light */
   --white-0: #{$white-0};
+
   --gray-0: #{$gray-0};
   --gray-1: #{$gray-1};
   --gray-2: #{$gray-2};
@@ -19,7 +21,26 @@ $point-dark: #3730a3;
   --gray-4: #{$gray-4};
   --gray-5: #{$gray-5};
   --gray-6: #{$gray-6};
+
   --point: #{$point};
   --point-light: #{$point-light};
   --point-dark: #{$point-dark};
+}
+
+
+/* 다크모드 */
+[data-theme='dark'] {
+  --white-0: #0f0f1a;
+
+  --gray-0: #ffffff;
+  --gray-1: #f8f8fc;
+  --gray-2: #f0f0f8;
+  --gray-3: #e0e0f0;
+  --gray-4: #9898b8;
+  --gray-5: #4a4a6a;
+  --gray-6: #1a1a2e;
+
+  --point: #6d5aed;
+  --point-light: #8f7fff;
+  --point-dark: #4f39d8;
 }

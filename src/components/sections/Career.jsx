@@ -1,9 +1,9 @@
 import React from 'react'
-import "./Carrer.scss"
+import "./Career.scss"
 
 export default function Career() {
     return (
-      <div className="career">
+      <div className="career" id='career'>
         <div className="career__inner">
           <p className="career__eyebrow">Career</p>
           <h2 className="career__title">경력</h2>

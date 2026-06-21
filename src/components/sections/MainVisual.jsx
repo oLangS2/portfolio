@@ -12,7 +12,7 @@ const MainVisual = () => {
   const typingText = useTyping(phrases)
 
   return (
-    <div className='main-visual'>
+    <div className='main-visual' id="main">
       <div className="main-visual__inner">
         <div className="main-visual__tag">
           <span>3년차</span>

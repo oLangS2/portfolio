@@ -21,10 +21,10 @@
         span{
             font-size: 12px;
             padding: 4px 12px;
-            border-radius: 4px;
-            color: var.$gray-2;
-            background: rgba(255, 255, 255, 0.5);
-            border: 1px solid var.$gray-4;
+            border-radius: 100px;
+            color: var(--gray-2);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--gray-5);
         }
     }
 
@@ -35,14 +35,14 @@
     }
 
     &__highlight{
-        color:var.$point;
-        border-bottom: 2px solid var.$point;
+        color:var(--point);
+        border-bottom: 2px solid var(--point);
     }
 
     &__typing {
         margin-top: 40px;
         font-size: 16px;
-        color: var.$gray-0;
+        color: var(--gray-0);
         min-height: 26px;
         line-height: 1.6;
     }
@@ -51,7 +51,7 @@
         display: inline-block;
         width: 1.5px;
         height: 15px;
-        background: var.$gray-0;
+        background: var(--gray-0);
         vertical-align: middle;
         margin-left: 2px;
         animation: blink .8s step-end infinite;
@@ -61,7 +61,7 @@
         position: relative;
         padding: 14px 36px;
         border-radius: 100px;
-        color: var.$point;
+        color: var(--point);
         font-size: 16px;
         font-weight: 600;
         cursor: pointer;
