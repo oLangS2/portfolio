@@ -116,7 +116,10 @@ function TsItem({ item }) {
         <span className="ts-icon">+</span>
       </button>
       <div className="ts-body">
-        <p>{item.a}</p>
+        {item.p ? <p>{item.p}</p> : null}
+        {item.d ? <p>{item.d}</p> : null}
+        {item.s ? <p>{item.s}</p> : null}
+        {item.r ? <p>{item.r}</p> : null}
       </div>
     </div>
   )
