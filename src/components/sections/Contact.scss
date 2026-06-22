@@ -1,4 +1,5 @@
 @use '../../styles/variables' as var;
+@use '../../styles/mixins' as m;
 
 .contact {
     padding: 100px 0px 0;
@@ -7,6 +8,10 @@
       max-width: 60vw;
       margin: 0 auto;
       text-align: center;
+
+      @include m.mobile{
+        max-width: 90vw;
+      }
     }
   
     &__eyebrow {
@@ -16,6 +21,10 @@
       text-transform: uppercase;
       color: var(--point);
       margin-bottom: 12px;
+      
+      @include m.mobile{
+        font-size: 12px;
+      }
     }
   
     &__title {
@@ -23,6 +32,10 @@
       font-weight: 500;
       letter-spacing: -0.02em;
       margin-bottom: 48px;
+      
+      @include m.mobile{
+        font-size: 28px;
+      }
     }
 
     &__btn-flex{
@@ -30,6 +43,11 @@
         align-items: center;
         justify-content: center;
         gap: 15px;
+        margin: 50px 0;
+        
+        @include m.mobile{
+          flex-direction: column;
+        }
     }
 
     &__btn {
@@ -43,6 +61,11 @@
         font-weight: 600;
         margin-bottom: 100px;
         transition: .2s;
+
+        @include m.mobile{
+          margin: 0;
+          width: 100%;
+        }
 
         &:hover{
           transform: translateY(-3px);

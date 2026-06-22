@@ -1,4 +1,5 @@
 @use '../../styles/variables' as var;
+@use '../../styles/mixins' as m;
 
 .projects {
     padding: 100px 0px;
@@ -6,6 +7,14 @@
     &__inner {
       max-width: 60vw;
       margin: 0 auto;
+
+      @include m.tablet{
+        max-width: 80vw;
+      }
+
+      @include m.mobile{
+        max-width: 90vw;
+      }
     }
   
     &__eyebrow {
@@ -15,6 +24,10 @@
       text-transform: uppercase;
       color: var(--point);
       margin-bottom: 12px;
+
+      @include m.mobile{
+        font-size: 12px;
+      }
     }
   
     &__title {
@@ -22,6 +35,10 @@
       font-weight: 500;
       letter-spacing: -0.02em;
       margin-bottom: 48px;
+      
+      @include m.mobile{
+        font-size: 28px;
+      }
     }
 
     &__grid {
@@ -29,7 +46,13 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
 
-      @media (max-width: 900px) { grid-template-columns: 1fr; }
+      @include m.tablet{
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @include m.mobile{
+        grid-template-columns: 1fr;
+      }
     }
 }
 

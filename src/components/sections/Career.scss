@@ -1,11 +1,24 @@
 @use '../../styles/variables' as var;
+@use '../../styles/mixins' as m;
 
 .career {
     padding: 100px 0px;
+
+    @include m.mobile{
+      padding: 0 0 100px 0;
+    }
   
     &__inner {
       max-width: 60vw;
       margin: 0 auto;
+
+      @include m.tablet{
+        max-width: 80vw;
+      }
+      
+      @include m.mobile{
+        max-width: 90vw;
+      }
     }
   
     &__eyebrow {
@@ -15,6 +28,10 @@
       text-transform: uppercase;
       color: var(--point);
       margin-bottom: 12px;
+
+      @include m.mobile{
+        font-size: 12px;
+      }
     }
   
     &__title {
@@ -22,6 +39,10 @@
       font-weight: 500;
       letter-spacing: -0.02em;
       margin-bottom: 48px;
+      
+      @include m.mobile{
+        font-size: 28px;
+      }
     }
   
     &__list {
@@ -37,6 +58,14 @@
       gap: 0 32px;
       padding-bottom: 40px;
       margin-bottom: 40px;
+
+      @include m.tablet{
+        grid-template-columns: 130px 1fr;
+      }
+
+      @include m.mobile{
+        display: block;
+      }
   
       &:last-child {
         border-bottom: none;
@@ -50,11 +79,23 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      
+      @include m.mobile{
+        flex-direction: row;
+        border: 1px solid var(--gray-5);
+        border-radius: 4px;
+        padding: 7px 12px;
+        background-color: var(--gray-6);
+      }
   
       span {
         font-size: 14px;
         color: var(--gray-1);
         line-height: 1.6;
+
+        @include m.mobile{
+          line-height: 26px;
+        }
       }
     }
   
@@ -76,6 +117,11 @@
       display: flex;
       flex-direction: column;
       gap: 2px;
+      
+      @include m.mobile{
+        margin-top: 10px;
+        padding: 0 0 0 12px;
+      }
     }
   
     &__company {

@@ -9,9 +9,11 @@ $gray-6: #f8f8fc;
 $point: #4f39d8;
 $point-light: #6d5aed;
 $point-dark: #3730a3;
+$mobile: 767px;
+$tablet: 1023px;
 
+/* 라이트 모드  */
 :root {
-  /* Light */
   --white-0: #{$white-0};
 
   --gray-0: #{$gray-0};

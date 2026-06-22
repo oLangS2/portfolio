@@ -1,5 +1,6 @@
 @use '../../styles/reset'; 
 @use '../../styles/variables' as var;
+@use '../../styles/mixins' as m;
 
 .weather-banner + .header{
     top: 40px;
@@ -19,7 +20,12 @@
     transition: background .4s ease,
     backdrop-filter .4s ease;
 
+    @include m.mobile{
+      padding: 12px 14px;
+    }
+
     &__logo{
+      flex-shrink: 1;
         font-family: 'Syne', sans-serif;
         font-weight: 700;
         font-size: 24px;
@@ -27,6 +33,9 @@
             color:var(--point-light);
             font-size: 30px;
             line-height: 24px;
+        }
+        @include m.mobile{
+          font-size: 20px;
         }
     }
     
@@ -99,9 +108,36 @@
         text-transform: uppercase;
         font-size: 14px;
         font-weight: 500;
+        position: relative;
+
+        @include m.mobile {
+          width: calc(100% - 56px);
+          overflow-x: auto;
+
+          -webkit-mask-image:
+            linear-gradient(
+              to right,
+              black 0%,
+              black 90%,
+              transparent 100%
+            );
+
+          mask-image:
+            linear-gradient(
+              to right,
+              black 0%,
+              black 90%,
+              transparent 100%
+            );
+        }
     }
 }
 nav{
     display: flex;
-    gap: 30px;
+    gap: 10px;
+    justify-content: space-between;
+
+    @include m.mobile{
+      width: calc(100% - 93px);
+    }
 }
