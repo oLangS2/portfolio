@@ -3,9 +3,9 @@ import "./MainVisual.scss"
 import { useTyping } from '../../hooks/useTyping'
 
 const phrases = [
-  '퍼블리싱 완성도와 React 개발, 둘 다 합니다.',
-  '픽셀 단위로 구현하고, 구조 단위로 설계합니다.',
-  '일정 안에 확실하게 구현합니다.',
+  '귀찮은 반복은 줄이고, 좋은 경험은 늘리고.',
+  '사용자와 팀 모두가 편한 서비스를 만들어갑니다.',
+  '단순히 화면이 아닌, 경험을 설계합니다.',
 ]
 
 const MainVisual = () => {
