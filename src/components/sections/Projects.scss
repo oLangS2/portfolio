@@ -62,7 +62,7 @@
   border-radius: 10px; overflow: hidden;
   cursor: pointer;
   transition: transform .3s, box-shadow .3s, border-color .25s;
-  box-shadow: 0 10px 20px rgba(149, 149, 149, 0.1);
+  box-shadow: 0 10px 20px rgba(149, 149, 149, 0.2);
 
   &:hover {
     transform: translateY(-3px);
@@ -94,10 +94,15 @@
     }
   }
 
-  &__body { padding: 20px 20px 60px 20px; }
+  &__body { 
+    padding: 20px 20px 60px 20px; 
+    @include m.mobile{
+      padding: 20px 20px 50px 20px;
+    }
+  }
 
   &__title {
-    font-size: 24px; font-weight: 500;
+    font-size: 24px; font-weight: 600;
     letter-spacing: -0.01em; color: var(--gray-0);
     margin-bottom: 10px;
     @include m.mobile{
@@ -111,6 +116,8 @@
     min-height: 100px;
     @include m.mobile{
       font-size: 14px;
+      min-height: 20px;
+      margin-bottom: 30px;
     }
   }
 
