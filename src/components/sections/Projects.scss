@@ -18,7 +18,7 @@
     }
   
     &__eyebrow {
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 500;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -31,7 +31,7 @@
     }
   
     &__title {
-      font-size: 36px;
+      font-size: 50px;
       font-weight: 500;
       letter-spacing: -0.02em;
       margin-bottom: 48px;
@@ -57,6 +57,7 @@
 }
 
 .pcard {
+  position: relative;
   border: 1px solid var(--gray-5);
   border-radius: 10px; overflow: hidden;
   cursor: pointer;
@@ -83,24 +84,34 @@
 
   &__badge {
     position: relative; z-index: 1;
-    font-size: 12px; font-weight: 500; letter-spacing: 0.08em;
+    font-size: 14px; font-weight: 500; letter-spacing: 0.08em;
     padding: 4px 10px; border-radius: 4px;
     background: rgba(255,255,255,.12);
     border: 1px solid rgba(255,255,255,.2);
     color: rgba(255,255,255,.8);
+    @include m.mobile{
+      font-size: 12px;
+    }
   }
 
-  &__body { padding: 20px 20px; }
+  &__body { padding: 20px 20px 60px 20px; }
 
   &__title {
-    font-size: 18px; font-weight: 500;
+    font-size: 24px; font-weight: 500;
     letter-spacing: -0.01em; color: var(--gray-0);
     margin-bottom: 10px;
+    @include m.mobile{
+      font-size: 18px;
+    }
   }
 
   &__desc {
-    font-size: 14px; color: var(--gray-2);
+    font-size: 18px; color: var(--gray-2);
     line-height: 1.7; margin-bottom: 40px;
+    min-height: 100px;
+    @include m.mobile{
+      font-size: 14px;
+    }
   }
 
   &__metrics {
@@ -108,20 +119,34 @@
   }
 
   &__metric-val {
-    font-size: 20px; font-weight: 600;
+    font-size: 24px; font-weight: 600;
     color: var(--point); line-height: 1;
     letter-spacing: -0.02em;
+    @include m.mobile{
+      font-size: 20px;
+    }
   }
 
   &__metric-lbl {
-    font-size: 12px; color: var(--gray-3); margin-top: 5px;
+    font-size: 14px; color: var(--gray-3); margin-top: 5px;
+    @include m.mobile{
+      font-size: 12px;
+    }
   }
 
-  &__tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  &__tags {
+    display: flex; flex-wrap: wrap; gap: 5px; 
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
 
   &__tag {
-    font-size: 12px; padding: 3px 8px;
+    font-size: 14px; padding: 3px 8px;
     border-radius: 4px;
     background: var(--gray-5); color: var(--gray-2);
+    @include m.mobile{
+      font-size: 12px;
+    }
   }
 }

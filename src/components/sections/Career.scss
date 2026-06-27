@@ -22,7 +22,7 @@
     }
   
     &__eyebrow {
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 500;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -35,7 +35,7 @@
     }
   
     &__title {
-      font-size: 36px;
+      font-size: 50px;
       font-weight: 500;
       letter-spacing: -0.02em;
       margin-bottom: 48px;
@@ -89,12 +89,13 @@
       }
   
       span {
-        font-size: 14px;
+        font-size: 18px;
         color: var(--gray-1);
         line-height: 1.6;
 
         @include m.mobile{
           line-height: 26px;
+          font-size: 14px;
         }
       }
     }
@@ -102,10 +103,14 @@
     &__badge {
       display: inline-flex;
       align-items: center;
-      font-size: 12px;
+      font-size: 14px;
       padding: 4px 12px;
       border-radius: 4px;
       width: fit-content;
+
+      @include m.mobile{
+        font-size: 12px;
+      }
   
       &--active {
         background: rgba(79, 57, 216, 0.2);
@@ -125,14 +130,22 @@
     }
   
     &__company {
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 600;
+
+      @include m.mobile{
+        font-size: 14px;
+      }
     }
   
     &__info {
-      font-size: 14px;
+      font-size: 16px;
       color: var(--gray-3);
       margin-bottom: 20px;
+
+      @include m.mobile{
+        font-size: 14px;
+      }
     }
   
     &__detail {
@@ -142,10 +155,14 @@
       gap: 5px;
   
       li {
-        font-size: 15px;
+        font-size: 18px;
         line-height: 1.75;
         padding-left: 14px;
         position: relative;
+
+        @include m.mobile{
+          font-size: 15px;
+        }
   
         &::before {
           content: '';

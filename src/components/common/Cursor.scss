@@ -1,4 +1,5 @@
 @use '../../styles/variables';
+@use '../../styles/mixins' as m;
 
 @mixin flex-center-fixed {
 	position: fixed;
@@ -14,6 +15,14 @@
 	background: variables.$point-light;
 	z-index: 9999;
 	transition: width .2s, height .2s, background .2s;
+
+	@include m.tablet{
+		display: none
+	}
+
+	@include m.mobile{
+		display: none
+	}
 }
   
 .cursor-ring {
@@ -24,6 +33,14 @@
 	z-index: 9998;
 	transition: width .25s, height .25s;
 	opacity: .5;
+	
+	@include m.tablet{
+		display: none
+	}
+
+	@include m.mobile{
+		display: none
+	}
 }
   
 body.cursor-hover {
