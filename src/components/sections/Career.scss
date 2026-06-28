@@ -58,6 +58,9 @@
       gap: 0 32px;
       padding-bottom: 40px;
       margin-bottom: 40px;
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.55s,transform 0.55s;
 
       @include m.tablet{
         grid-template-columns: 130px 1fr;
@@ -72,6 +75,14 @@
         padding-bottom: 0;
         margin-bottom: 0;
       }
+
+      &.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      
+      &:nth-child(2) { transition-delay: 0.1s; }
+      &:nth-child(3) { transition-delay: 0.2s; }
     }
   
     &__period {

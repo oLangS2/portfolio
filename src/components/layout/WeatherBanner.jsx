@@ -2,6 +2,7 @@ import { useState } from 'react';
 import "./WeatherBanner.scss";
 import { useWeather } from '../../hooks/useWeather';
 import WeatherIcon from '../common/WeatherIcon';
+import CountUp from '../common/CountUp';
 
 export default function WeatherBanner() {
   const { weather, city, error } = useWeather();
@@ -10,6 +11,7 @@ export default function WeatherBanner() {
   if (!visible) return null;
 
   const isDemo = !!error;
+  const weatherLoaded = !isDemo && !!weather
 
   return (
     <div className={`weather-banner ${isDemo ? 'weather-banner--demo' : ''}`}>
@@ -43,15 +45,15 @@ export default function WeatherBanner() {
         ) : weather ? (
           <>
             <span className="weather-banner__temp">
-              {weather.temp}°C
+              <CountUp value={`${weather.temp}°C`} active={weatherLoaded} />
             </span>
 
             <span className="weather-banner__pill">
-              습도 {weather.humidity}%
+              습도 <CountUp value={`${weather.humidity}%`} active={weatherLoaded} />
             </span>
 
             <span className="weather-banner__pill">
-              바람 {weather.wind}m/s
+              바람 <CountUp value={`${weather.wind}m/s`} active={weatherLoaded} />
             </span>
           </>
         ) : null}

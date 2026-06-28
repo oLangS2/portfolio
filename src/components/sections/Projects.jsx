@@ -1,10 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
 import { PROJECTS } from '../../contants/projects'
 import ProjectModal from './ProjectModal'
+import CountUp from '../common/CountUp'
 import './Projects.scss'
 
 export default function Projects() {
   const [activeId, setActiveId] = useState(null)
+  const listRef = useRef(null)
+  const [visibleIds, setVisibleIds] = useState(new Set())
 
   // 현재 스크롤 위치 저장
   const scrollY = useRef(0)
@@ -45,6 +48,43 @@ export default function Projects() {
     }
   }, [activeId])
 
+// useEffect 안에 setTimeout 정리 추가
+useEffect(() => {
+  const items = listRef.current?.querySelectorAll('.pcard')
+  if (!items) return
+
+  const timeouts = []
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = [...items].indexOf(entry.target)
+          const delay = index * 0.1
+
+          entry.target.style.transitionDelay = `${delay}s`
+          entry.target.classList.add('visible')
+
+          const id = entry.target.dataset.id
+          const t = setTimeout(() => {
+            setVisibleIds(prev => new Set(prev).add(id))
+          }, delay * 1000 + 500)
+
+          timeouts.push(t)
+        }
+      })
+    },
+    { threshold: 0.1 }
+  )
+
+  items.forEach(el => observer.observe(el))
+
+  return () => {
+    observer.disconnect()
+    timeouts.forEach(clearTimeout)
+  }
+}, [])
+
   return (
     <section className="projects" id="project">
       <div className="projects__inner">
@@ -52,11 +92,12 @@ export default function Projects() {
         <p className="projects__eyebrow">Projects</p>
         <h2 className="projects__title">주요 프로젝트</h2>
 
-        <div className="projects__grid">
+        <div className="projects__grid" ref={listRef}>
           {PROJECTS.map((project) => (
             <div
               key={project.id}
               className="pcard"
+              data-id={project.id}
               onClick={() => setActiveId(project.id)}
             >
               <div
@@ -72,7 +113,9 @@ export default function Projects() {
                 <div className="pcard__metrics">
                   {project.metrics.map((m, i) => (
                     <div key={i}>
-                      <div className="pcard__metric-val">{m.val}</div>
+                      <div className="pcard__metric-val">
+                        <CountUp value={m.val} active={visibleIds.has(String(project.id))} />
+                      </div>
                       <div className="pcard__metric-lbl">{m.lbl}</div>
                     </div>
                   ))}

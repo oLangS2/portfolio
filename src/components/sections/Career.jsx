@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./Career.scss"
 
 export default function Career() {
-    return (
+const listRef = useRef(null)
+
+useEffect(() => {
+  const items = listRef.current?.querySelectorAll('.career__item')
+  if (!items) return
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible')
+        }
+      })
+    },
+    { threshold: 0.2 }
+  )
+
+  items.forEach(el => observer.observe(el))
+
+  return () => observer.disconnect()
+}, []) 
+    
+return (
       <div className="career" id='career'>
         <div className="career__inner">
           <p className="career__eyebrow">Career</p>
           <h2 className="career__title">경력</h2>
-          <ul className="career__list">
+          <ul className="career__list"  ref={listRef}>
   
             <li className="career__item">
               <div className="career__period">

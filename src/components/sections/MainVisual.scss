@@ -49,7 +49,18 @@
 
     &__highlight{
         color:var(--point);
-        border-bottom: 2px solid var(--point);
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--point);
+            animation: draw 0.8s 0.5s ease forwards;
+        }
     }
 
     &__typing {
@@ -139,4 +150,6 @@
         0%, 100% { opacity: 1; }
         50%       { opacity: 0; }
       }
+      
+    @keyframes draw { to { width: 100%; } }
 }

@@ -61,7 +61,8 @@
     &__btn {
         display: inline-block;
         margin-top: 40px;
-        padding: 14px 25px;
+        padding: 16px 30px;
+        min-width: 180px;
         color: var(--gray-0);
         border: 1px solid var(--gray-4);
         border-radius: 100px;
@@ -74,6 +75,7 @@
           margin: 0;
           width: 100%;
           font-size: 14px;
+          padding: 12px 30px;
         }
 
         &:hover{
@@ -90,6 +92,37 @@
               background-color: var(--point-light);
             }
         }
+    }
+
+    .dl-link {
+      position: relative;
+      overflow: hidden;
+    
+      &__bar {
+        position: absolute;
+        left: 0; top: 0; bottom: 0;
+        width: 0%;
+        background: var(--gray-5);
+        z-index: 0;
+        transition: none;
+      }
+    
+      span {
+        position: relative;
+        z-index: 1;
+        transition: 0.3s;
+      }
+    
+      &--loading {
+        cursor: wait;
+        pointer-events: none;
+      }
+  
+      &--done {
+        cursor: default;
+        pointer-events: none;
+        border: 1px solid var(--gray-4);
+      }
     }
 }
 

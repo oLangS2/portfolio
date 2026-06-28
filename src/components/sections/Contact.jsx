@@ -1,7 +1,27 @@
-import React from 'react'
+import { useState, useRef } from 'react'
 import "./Contact.scss"
 
 export default function Contact() {
+  const [status, setStatus] = useState('idle')
+  const [progress, setProgress] = useState(0)
+  const rafRef = useRef(null)
+
+  const handleClick = (e) => {
+    if (status !== 'idle') { e.preventDefault(); return }
+
+    setStatus('loading')
+    const start = performance.now()
+    const duration = 800
+
+    const tick = (now) => {
+      const p = Math.min((now - start) / duration, 1)
+      setProgress(Math.round(p * 100))
+      if (p < 1) rafRef.current = requestAnimationFrame(tick)
+      else setStatus('done')
+    }
+    rafRef.current = requestAnimationFrame(tick)
+  }
+
   return (
     <div className='contact' id='contact'>
       <div className="contact__inner">
@@ -11,9 +31,25 @@ export default function Contact() {
           퍼블리싱 완성도와 React 개발 경험을 바탕으로 <br />서비스의 품질을 함께 높이고 싶습니다.
         </p>
         <div className="contact__btn-flex">
-          <a href="mailto:guswjd8389@gmail.com" className="contact__btn email">이메일 보내기 ✉</a>
-          <a href="https://o-lang.tistory.com" target='_blank' className="contact__btn tistory">개발 블로그 ↗</a>
-          <a href="/resume.pdf" download="오현정_이력서.pdf" className="contact__btn download">이력서 다운로드 ↓</a>
+          <a href="mailto:guswjd8389@gmail.com" className="contact__btn email">
+            이메일 보내기 ✉
+          </a>
+          <a href="https://o-lang.tistory.com" target='_blank' className="contact__btn tistory">
+            개발 블로그 ↗
+          </a>
+          <a
+            href="/오현정_이력서.pdf"
+            download="오현정_이력서.pdf"
+            className={`contact__btn dl-link dl-link--${status}`}
+            onClick={handleClick}
+          >
+            <div className="dl-link__bar" style={{ width: `${progress}%` }} />
+            <span>
+              {status === 'idle' && '이력서 다운로드 ↓'}
+              {status === 'loading' && `${progress}%`}
+              {status === 'done' && '다운로드 완료 ✓'}
+            </span>
+          </a>
         </div>
       </div>
       <footer>

@@ -63,6 +63,14 @@
   cursor: pointer;
   transition: transform .3s, box-shadow .3s, border-color .25s;
   box-shadow: 0 10px 20px rgba(149, 149, 149, 0.2);
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 0.55s,transform 0.55s;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   &:hover {
     transform: translateY(-3px);
