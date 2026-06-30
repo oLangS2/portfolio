@@ -94,7 +94,7 @@ useEffect(() => {
 
         <div className="projects__grid" ref={listRef}>
           {PROJECTS.map((project) => (
-            <div
+            <a
               key={project.id}
               className="pcard"
               data-id={project.id}
@@ -126,7 +126,7 @@ useEffect(() => {
                   ))}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 

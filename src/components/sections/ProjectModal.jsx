@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './ProjectModal.scss'
 
-const STAR_LABELS = { s: '상황', t: '역할', a: '해결', r: '결과' }
+const STAR_LABELS = { s: '상황 (SITUATION)', t: '역할 (TASK)', a: '해결 (ACTION)', r: '결과 (RESULT)' }
 
 export default function ProjectModal({ project, onClose }) {
   const { kicker, title, gradient, metrics, screenshots, star, troubleshooting, links } = project
@@ -30,10 +30,10 @@ export default function ProjectModal({ project, onClose }) {
   return (
     <div className={`moverlay ${open ? "open" : ""}`}  onClick={handleOverlay}>
       <div className="modal" role="dialog" aria-modal="true">
-
+        <button className="modal__close"  onClick={closeModal} aria-label="닫기">×</button>
+        
         {/* 헤더 */}
         <div className="modal__hero">
-          <button className="modal__close"  onClick={closeModal} aria-label="닫기">×</button>
           <div className="modal__hero-content">
             <p className="modal__kicker">{kicker}</p>
             <h2 className="modal__title">{title}</h2>
@@ -64,12 +64,16 @@ export default function ProjectModal({ project, onClose }) {
           </div>
 
           {/* 트러블슈팅 */}
-          <p className="modal__label">트러블슈팅</p>
-          <div className="ts-list">
-            {troubleshooting.map((ts, i) => (
-              <TsItem key={i} item={ts} />
-            ))}
-          </div>
+          {troubleshooting.length > 0 && (
+            <>
+              <p className="modal__label">트러블슈팅</p>
+              <div className="ts-list">
+                {troubleshooting.map((ts, i) => (
+                  <TsItem key={i} item={ts} />
+                ))}
+              </div>
+            </>
+          )}
 
           {/* 스크린샷 */}
           <p className="modal__label">작업 화면</p>
