@@ -1,3 +1,20 @@
+import jinro1 from '../assets/images/jinro_1.png';
+import jinro2 from '../assets/images/jinro_2.png';
+import jinro3 from '../assets/images/jinro_3.png';
+import jinro4 from '../assets/images/jinro_4.png';
+import ns1 from '../assets/images/ns_1.png';
+import ns2 from '../assets/images/ns_2.png';
+import hddf1 from '../assets/images/hddf_8.png';
+import hddf2 from '../assets/images/hddf_2.png';
+import hddf3 from '../assets/images/hddf_11.png';
+import hddf4 from '../assets/images/hddf_12.png';
+import dr1 from '../assets/images/dr_1.png';
+import dr2 from '../assets/images/dr_2.png';
+import ac1 from '../assets/images/ac_1.png';
+import ac2 from '../assets/images/ac_2.png';
+import fd1 from '../assets/images/fd_1.png';
+import fd2 from '../assets/images/fd_2.png';
+
 export const PROJECTS = [
     {
       id: 'jinro',
@@ -14,10 +31,10 @@ export const PROJECTS = [
       ],
       tags: ['React', 'ShopBy API', 'SCSS'],
       screenshots: [
-        { src: '/images/projects/jinro/main.png',   label: '메인 · 상품 화면'  },
-        { src: '/images/projects/jinro/cart.png',   label: '장바구니 · 주문'   },
-        { src: '/images/projects/jinro/mypage.png', label: '마이페이지'        },
-        { src: '/images/projects/jinro/mobile.png', label: '모바일 반응형'     },
+        { src: jinro1, label: '메인 · 상품 화면'  },
+        { src: jinro2, label: '장바구니 · 주문'   },
+        { src: jinro3, label: '마이페이지'        },
+        { src: jinro4, label: '모바일 반응형'     },
       ],
       star: {
         s: 'ShopBy 플랫폼 기반으로 신규 쇼핑몰을 구축하게 됐는데, 외부 API 스펙을 문서만 보고 처음부터 직접 파악해야 하는 상황이었습니다',
@@ -62,10 +79,10 @@ export const PROJECTS = [
       ],
       tags: ['JavaScript','CSS','GA4'],
       screenshots: [
-        { src: '/images/projects/jinro/main.png',   label: '메인 · 상품 화면'  },
-        { src: '/images/projects/jinro/cart.png',   label: '장바구니 · 주문'   },
-        { src: '/images/projects/jinro/mypage.png', label: '마이페이지'        },
-        { src: '/images/projects/jinro/mobile.png', label: '모바일 반응형'     },
+        { src: hddf1, label: '메인 · 상품 화면'  },
+        { src: hddf2, label: '장바구니 · 주문'   },
+        { src: hddf3, label: '메인 · 상품 화면'  },
+        { src: hddf4, label: '장바구니 · 주문'   },
       ],
       star: {
         s: '주요 서비스 리뉴얼을 단독으로 담당하면서, 이벤트 페이지마다 코드 스타일이 제각각이라 유지보수가 어려운 상황이었습니다',
@@ -94,10 +111,8 @@ export const PROJECTS = [
       ],
       tags: ['React','Axios', 'SCSS','Cafe24',],
       screenshots: [
-        { src: '/images/projects/jinro/main.png',   label: '메인 · 상품 화면'  },
-        { src: '/images/projects/jinro/cart.png',   label: '장바구니 · 주문'   },
-        { src: '/images/projects/jinro/mypage.png', label: '마이페이지'        },
-        { src: '/images/projects/jinro/mobile.png', label: '모바일 반응형'     },
+        { src: ns1,   label: '메인 · 상품 화면'  },
+        { src: ns2,   label: '장바구니 · 주문'   },
       ],
       star: {
         s: 'Cafe24 기반 쇼핑몰을 운영하면서, 신규 숏폼 페이지 구축이랑 백오피스 개발이 동시에 필요한 상황이었습니다',
@@ -140,10 +155,8 @@ export const PROJECTS = [
       ],
       tags: ['React', 'Axios', 'SCSS', 'Cafe24'],
       screenshots: [
-        { src: '/images/projects/jinro/main.png',   label: '메인 · 상품 화면'  },
-        { src: '/images/projects/jinro/cart.png',   label: '장바구니 · 주문'   },
-        { src: '/images/projects/jinro/mypage.png', label: '마이페이지'        },
-        { src: '/images/projects/jinro/mobile.png', label: '모바일 반응형'     },
+        { src: dr2,   label: '메인 · 상품 화면'  },
+        { src: dr1,   label: '장바구니 · 주문'   },
       ],
       star: {
         s: '신규 Cafe24 쇼핑몰 구축과 운영을 위한 React 백오피스 개발이 동시에 필요한 프로젝트였습니다',
@@ -183,10 +196,8 @@ export const PROJECTS = [
       ],
       tags: ['Axios', 'JavaScript', 'CSS','Cafe24',],
       screenshots: [
-        { src: '/images/projects/jinro/main.png',   label: '메인 · 상품 화면'  },
-        { src: '/images/projects/jinro/cart.png',   label: '장바구니 · 주문'   },
-        { src: '/images/projects/jinro/mypage.png', label: '마이페이지'        },
-        { src: '/images/projects/jinro/mobile.png', label: '모바일 반응형'     },
+        { src: ac1,   label: '메인 · 상품 화면'  },
+        { src: ac2,   label: '장바구니 · 주문'   },
       ],
       star: {
         s: '프로모션 및 시즌별 콘텐츠 변경이 빈번한 Cafe24 쇼핑몰 운영을 담당했습니다',
@@ -213,10 +224,8 @@ export const PROJECTS = [
       ],
       tags: ['Cafe24', 'JavaScript', 'CSS'],
       screenshots: [
-        { src: '/images/projects/jinro/main.png',   label: '메인 · 상품 화면'  },
-        { src: '/images/projects/jinro/cart.png',   label: '장바구니 · 주문'   },
-        { src: '/images/projects/jinro/mypage.png', label: '마이페이지'        },
-        { src: '/images/projects/jinro/mobile.png', label: '모바일 반응형'     },
+        { src: fd2,   label: '메인 · 상품 화면'  },
+        { src: fd1,   label: '장바구니 · 주문'   },
       ],
       star: {
         s: 'Cafe24 기반 쇼핑몰의 주요 화면 개선 및 운영 퍼블리싱이 필요한 상황이었습니다',

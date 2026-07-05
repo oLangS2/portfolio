@@ -38,7 +38,7 @@ export default function Contact() {
             개발 블로그
           </a>
           <a
-            href="/오현정_이력서.pdf"
+            href={`${process.env.PUBLIC_URL}/오현정_이력서.pdf`}
             download="오현정_이력서.pdf"
             className={`contact__btn dl-link dl-link--${status}`}
             onClick={handleClick}
