@@ -84,13 +84,9 @@
           color: var(--point);
         }
 
-        &.email{
+        &.dl-link{
             border: 1px solid var(--point);
-            background-color: var(--point);
-            color: var(--white-0);
-            &:hover{
-              background-color: var(--point-light);
-            }
+            color: var(--point);
         }
     }
 
@@ -121,7 +117,9 @@
       &--done {
         cursor: default;
         pointer-events: none;
-        border: 1px solid var(--gray-4);
+        background-color: var(--point);
+        position: static;
+        color: var(--white-0);
       }
     }
 }

@@ -32,10 +32,10 @@ export default function Contact() {
         </p>
         <div className="contact__btn-flex">
           <a href="mailto:guswjd8389@gmail.com" className="contact__btn email">
-            이메일 보내기 ✉
+            이메일 보내기
           </a>
           <a href="https://o-lang.tistory.com" target='_blank' className="contact__btn tistory">
-            개발 블로그 ↗
+            개발 블로그
           </a>
           <a
             href="/오현정_이력서.pdf"
@@ -45,7 +45,7 @@ export default function Contact() {
           >
             <div className="dl-link__bar" style={{ width: `${progress}%` }} />
             <span>
-              {status === 'idle' && '이력서 다운로드 ↓'}
+              {status === 'idle' && '이력서 다운로드'}
               {status === 'loading' && `${progress}%`}
               {status === 'done' && '다운로드 완료 ✓'}
             </span>
