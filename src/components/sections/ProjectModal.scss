@@ -183,7 +183,7 @@
     gap: 10px; margin-bottom: 28px;
     
     @include m.mobile{
-      grid-template-columns: 1fr;
+      gap: 4px;
     }
   }
   
