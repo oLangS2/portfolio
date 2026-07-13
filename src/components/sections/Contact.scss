@@ -62,14 +62,14 @@
         display: inline-block;
         margin-top: 40px;
         padding: 16px 30px;
-        min-width: 180px;
-        color: var(--gray-0);
-        border: 1px solid var(--gray-4);
-        border-radius: 100px;
+        min-width: 160px;
+        border-radius: 10px;
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 100px;
-        transition: .2s;
+        transition: all .3s;
+        background-color: var(--gray-6);
+        color: var(--point-dark);
 
         @include m.mobile{
           margin: 0;
@@ -79,48 +79,40 @@
         }
 
         &:hover{
-          transform: translateY(-3px);
-          border: 1px solid var(--point);
-          color: var(--point);
+          background-color: var(--gray-5);
         }
 
-        &.dl-link{
-            border: 1px solid var(--point);
-            color: var(--point);
-        }
-    }
+        &.download{
+          background: linear-gradient(
+              120deg,
+              #ffffff 0%,
+              #f7f5ff 15%,
+              #efeaff 35%,
+              #e6deff 50%,
+              #efeaff 65%,
+              #f7f5ff 85%,
+              #ffffff 100%
+          );
+      
+          background-size: 400% 100%;
+          animation: gradientFlow 6s linear infinite;
 
-    .dl-link {
-      position: relative;
-      overflow: hidden;
-    
-      &__bar {
-        position: absolute;
-        left: 0; top: 0; bottom: 0;
-        width: 0%;
-        background: var(--gray-5);
-        z-index: 0;
-        transition: none;
-      }
-    
-      span {
-        position: relative;
-        z-index: 1;
-        transition: 0.3s;
-      }
-    
-      &--loading {
-        cursor: wait;
-        pointer-events: none;
-      }
-  
-      &--done {
-        cursor: default;
-        pointer-events: none;
-        background-color: var(--point);
-        position: static;
-        color: var(--white-0);
-      }
+          @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+        
+            50% {
+                background-position: 100% 50%;
+            }
+        
+            100% {
+                background-position: 0% 50%;
+            }
+          }
+          
+        }
+
     }
 }
 

@@ -138,6 +138,10 @@ nav{
     gap: 30px;
     justify-content: space-between;
 
+    a{
+      color: var(--gray-0);
+    }
+
     @include m.mobile{
       gap: 10px;
       width: calc(100% - 93px);

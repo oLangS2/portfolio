@@ -12,7 +12,7 @@ input, button, textarea, select { margin: 0; padding: 0; border-radius: 0; font-
 button, label { cursor: pointer; }
 h1, h2, h3, h4, h5, h6, b, strong { font-weight: 700; }
 address, cite, em, i { font-style: normal; }
-a:link, a:visited { color: var(--gray-0); text-decoration: none; }
+a:link, a:visited { text-decoration: none; }
 a:hover, a:focus, a:active { background-color: transparent; text-decoration: none; }
 a, button, [data-hover] { cursor: none; }
 select { appearance: none; -webkit-appearance: none; -moz-appearance: none; }
