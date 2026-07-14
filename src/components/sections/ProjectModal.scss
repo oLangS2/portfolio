@@ -180,7 +180,9 @@
   
   .screenshot-grid {
     display: flex;
-    gap: 10px; margin-bottom: 28px;
+    overflow-y: hidden;
+    gap: 10px;
+    margin-bottom: 28px;
     
     @include m.mobile{
       gap: 4px;

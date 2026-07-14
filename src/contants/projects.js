@@ -4,10 +4,14 @@ import jinro3 from '../assets/images/jinro_3.png';
 import jinro4 from '../assets/images/jinro_4.png';
 import ns1 from '../assets/images/ns_1.png';
 import ns2 from '../assets/images/ns_2.png';
+import ns3 from '../assets/images/ns_3.png';
+import ns4 from '../assets/images/ns_4.png';
+import ns5 from '../assets/images/ns_5.png';
 import hddf1 from '../assets/images/hddf_8.png';
 import hddf2 from '../assets/images/hddf_2.png';
 import hddf3 from '../assets/images/hddf_11.png';
 import hddf4 from '../assets/images/hddf_12.png';
+import hddf5 from '../assets/images/hddf_13.png';
 import dr1 from '../assets/images/dr_1.png';
 import dr2 from '../assets/images/dr_2.png';
 import ac1 from '../assets/images/ac_1.png';
@@ -80,6 +84,7 @@ export const PROJECTS = [
       tags: ['JavaScript','CSS','GA4'],
       screenshots: [
         { src: hddf1, label: '메인 · 상품 화면'  },
+        { src: hddf5, label: '장바구니 · 주문'   },
         { src: hddf2, label: '장바구니 · 주문'   },
         { src: hddf3, label: '메인 · 상품 화면'  },
         { src: hddf4, label: '장바구니 · 주문'   },
@@ -111,8 +116,9 @@ export const PROJECTS = [
       ],
       tags: ['React','Axios', 'SCSS','Cafe24',],
       screenshots: [
-        { src: ns1,   label: '메인 · 상품 화면'  },
-        { src: ns2,   label: '장바구니 · 주문'   },
+        { src: ns3,   label: '장바구니 · 주문'   },
+        { src: ns4,   label: '장바구니 · 주문'   },
+        { src: ns5,   label: '장바구니 · 주문'   },
       ],
       star: {
         s: 'Cafe24 기반 쇼핑몰을 운영하면서, 신규 숏폼 페이지 구축이랑 백오피스 개발이 동시에 필요한 상황이었습니다',
@@ -130,7 +136,7 @@ export const PROJECTS = [
         },
         {
           tag: 'Infinite Scroll',
-          q: 'ㅋㅋㅋTV 리스트 페이지의 무한 스크롤 구현',
+          q: '숏폼 리스트 페이지의 무한 스크롤 구현',
           p: '[문제점] 추가 데이터를 불러오는 동안 화면이 비어 보여서, 사용자가 로딩 중인지 알기 어려운 상태였습니다',
           s: '[해결] 결	Skeleton UI를 적용해서 로딩 상태를 시각적으로 표현하고, 콘텐츠가 자연스럽게 이어지도록 구현했습니다',
           r: '[결과] 로딩 중 빈 화면 대신 Skeleton을 쓰면 사용자 입장에서 훨씬 자연스러운 탐색 경험을 줄 수 있다는 걸 느꼈습니다',
